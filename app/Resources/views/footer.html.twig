@@ -1,0 +1,68 @@
+<div class="footer-top-area">
+    <div class="zigzag-bottom"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3 col-sm-6">
+                <div class="footer-about-us">
+                    <h2><span>X</span>anthos</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis sunt id doloribus vero quam laborum quas alias dolores blanditiis iusto consequatur, modi aliquid eveniet eligendi iure eaque ipsam iste, pariatur omnis sint! Suscipit, debitis, quisquam. Laborum commodi veritatis magni at?</p>
+                    <div class="footer-social"> {# TODO ajouter réseaux sociaux #}
+                        <a href="#" target="_blank"><i class="fa fa-facebook"></i></a>
+                        <a href="#" target="_blank"><i class="fa fa-twitter"></i></a>
+                        <a href="#" target="_blank"><i class="fa fa-youtube"></i></a>
+                        <a href="#" target="_blank"><i class="fa fa-linkedin"></i></a>
+                        <a href="#" target="_blank"><i class="fa fa-pinterest"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3 col-sm-6">
+                <div class="footer-menu">
+                    <h2 class="footer-wid-title">Navigation utilisateur </h2>
+                    <ul>
+                        <li><a href="#">Mon compte</a></li> {# TODO : implémenter #}
+                        <li><a href="#">Historique commandes</a></li>
+                        <li><a href="#">Contact vendeur</a></li>
+                        <li><a href="{{ path('index') }}">Page d'accueil</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-md-3 col-sm-6">
+                <div class="footer-menu">
+                    <h2 class="footer-wid-title">Categories</h2>
+                    <ul>
+                        {% for category in categorys %}
+                            <li><a>{{ category }}</a></li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-md-3 col-sm-6"> {# TODO implémenter #}
+                <div class="footer-newsletter">
+                    <h2 class="footer-wid-title">Newsletter</h2>
+                    <p>Inscrivez-vous à notre newsletter pour recevoir les informations sur nos derniers produits !</p>
+                    <div class="newsletter-form">
+                        <form action="#">
+                            <input type="email" placeholder="Entrez votre email">
+                            <input type="submit" value="Subscribe">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> <!-- End footer top area -->
+
+<div class="footer-bottom-area">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8">
+                <div class="copyright">
+                    <p>&copy; 2016 Xanthos. All Rights Reserved.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> <!-- End footer bottom area -->

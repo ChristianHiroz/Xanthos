@@ -1,0 +1,11 @@
+services:
+    admin.category:
+        class: CoreBundle\Admin\CategoryAdmin
+        arguments: [~, ECommerceBundle\Entity\Category, ~]
+        tags:
+            - { name: sonata.admin, manager_type: orm, label: Catégories, group: Vente }
+    admin.product:
+        class: CoreBundle\Admin\ProductAdmin
+        arguments: [~, ECommerceBundle\Entity\Product, ~]
+        tags:
+            - { name: sonata.admin, manager_type: orm, label: Produits, group: Vente }
