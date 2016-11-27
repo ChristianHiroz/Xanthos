@@ -5,7 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="acc54a72-1119-4674-bd1f-7cb7bc2e7d4b" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ECommerceBundle/Entity/Product.php" afterPath="$PROJECT_DIR$/src/ECommerceBundle/Entity/Product.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ECommerceBundle/Entity/Category.php" afterPath="$PROJECT_DIR$/src/ECommerceBundle/Entity/Category.php" />
     </list>
     <ignored path="xanthos.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -68,11 +68,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Product.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Product.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ECommerceBundle/Entity/Product.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="576">
               <caret line="168" column="32" selection-start-line="168" selection-start-column="32" selection-end-line="168" selection-end-column="32" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Category.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/ECommerceBundle/Entity/Category.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="441">
+              <caret line="159" column="32" selection-start-line="159" selection-start-column="32" selection-end-line="159" selection-end-column="32" />
               <folding />
             </state>
           </provider>
@@ -136,12 +146,12 @@
         <option value="$PROJECT_DIR$/app/config/services.yml" />
         <option value="$PROJECT_DIR$/src/CoreBundle/Admin/ProductAdmin.php" />
         <option value="$PROJECT_DIR$/../template/shop.html" />
-        <option value="$PROJECT_DIR$/src/ECommerceBundle/Entity/Category.php" />
         <option value="$PROJECT_DIR$/src/ECommerceBundle/Resources/views/ECommerce/showCategory.html.twig" />
         <option value="$PROJECT_DIR$/src/ECommerceBundle/Controller/ECommerceController.php" />
         <option value="$PROJECT_DIR$/src/ECommerceBundle/Resources/views/ECommerce/showProduct.html.twig" />
         <option value="$PROJECT_DIR$/app/Resources/views/header.html.twig" />
         <option value="$PROJECT_DIR$/src/ECommerceBundle/Entity/Product.php" />
+        <option value="$PROJECT_DIR$/src/ECommerceBundle/Entity/Category.php" />
       </list>
     </option>
   </component>
@@ -562,12 +572,12 @@
       <workItem from="1479661162515" duration="2147000" />
       <workItem from="1479663348797" duration="4716000" />
       <workItem from="1479721155240" duration="47000" />
-      <workItem from="1480266110380" duration="6919000" />
+      <workItem from="1480266110380" duration="6967000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="16077000" />
+    <option name="totallyTimeSpent" value="16125000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1055" extended-state="0" />
@@ -938,14 +948,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ECommerceBundle/Entity/Category.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="166" column="33" selection-start-line="166" selection-start-column="33" selection-end-line="166" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/ECommerceBundle/Resources/views/ECommerce/showCategory.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="256">
@@ -1004,6 +1006,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="576">
           <caret line="168" column="32" selection-start-line="168" selection-start-column="32" selection-end-line="168" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ECommerceBundle/Entity/Category.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="441">
+          <caret line="159" column="32" selection-start-line="159" selection-start-column="32" selection-end-line="159" selection-end-column="32" />
           <folding />
         </state>
       </provider>
