@@ -160,5 +160,21 @@ class Category
     public function __toString():string{
         return $this->name;
     }
+
+    /**
+     * @return Category
+     */
+    public function getProducts()
+    {
+        return $this->products;
+    }
+
+    /**
+     * @param Category $products
+     */
+    public function setProducts(Category $products)
+    {
+        $this->products = $products;
+    }
 }
 

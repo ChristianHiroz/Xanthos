@@ -50,6 +50,12 @@ class Product
      */
     private $category;
 
+    /**
+     * @ORM\Column(type="string", name="media")
+     *
+     */
+    private $file;
+
 
     /**
      * Get id
@@ -162,6 +168,22 @@ class Product
      */
     public function __toString():string{
         return $this->name;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getFile()
+    {
+        return $this->file;
+    }
+
+    /**
+     * @param mixed $file
+     */
+    public function setFile($file)
+    {
+        $this->file = $file;
     }
 }
 

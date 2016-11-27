@@ -1,0 +1,10 @@
+{% trans_default_domain 'FOSUserBundle' %}
+<div class="form" style="margin-top:10%;">
+<div style="margin-left: 30px;"><img style="width: 150px; height:auto; " src="{{ asset('css/img/logo.png') }}"/></div>
+    {{ form_start(form, {'method': 'post', 'action': path('fos_user_registration_register'), 'attr': {'class': 'login_form'}}) }}
+        {{ form_widget(form) }}
+        <div>
+            <input style="background-color:#1abc9c;" type="submit" value="{{ 'registration.submit'|trans }}" />
+        </div>
+    {{ form_end(form) }}
+</div>

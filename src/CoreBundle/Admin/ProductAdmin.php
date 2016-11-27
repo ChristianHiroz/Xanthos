@@ -14,6 +14,8 @@ class ProductAdmin extends AbstractAdmin
         $formMapper->add('description', 'text', array('label' => 'Description'));
         $formMapper->add('price', 'integer', array('label' => 'Prix'));
         $formMapper->add('category', 'sonata_type_model', array('label' => 'Catégorie'));
+        $formMapper->add('file', 'file', array('label' => 'Image', 'data_class' => NULL));
+
     }
 
     protected function configureDatagridFilters(DatagridMapper $datagridMapper)
