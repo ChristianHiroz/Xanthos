@@ -12,7 +12,8 @@ class CategoryAdmin extends AbstractAdmin
     {
         $formMapper->add('name', 'text', array('label' => 'Nom'));
         $formMapper->add('mainCategory', 'choice', array('label' => 'Catégorie principale', 'choices' => array('Oui' => 1, 'Non' => 0)));
-        $formMapper->add('subCategorys', 'sonata_type_model', array('label' => 'Sous catégories', 'multiple' => true, 'by_reference' => false, 'required' => false));
+        $formMapper->add('masterCategory', 'sonata_type_model', array('label' => 'Catégorie parente'));
+        $formMapper->add('picture', 'file', array('label' => 'Image', 'data_class' => NULL));
     }
 
     protected function configureDatagridFilters(DatagridMapper $datagridMapper)

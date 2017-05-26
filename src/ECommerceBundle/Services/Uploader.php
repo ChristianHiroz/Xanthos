@@ -21,4 +21,9 @@ class Uploader
 
         return $fileName;
     }
+
+    public function getTargetDir()
+    {
+        return $this->targetDir;
+    }
 }

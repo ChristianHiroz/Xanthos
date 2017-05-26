@@ -5,8 +5,8 @@
             <div class="col-md-8">
                 <div class="user-menu">
                     <ul>
-                        <li><a href="#"><i class="fa fa-user"></i> Mon compte</a></li>
-                        <li><a href="#"><i class="fa fa-shopping-cart"></i> Mon panier</a></li>
+                        <li><a href="{{ path('fos_user_profile_show') }}"><i class="fa fa-user"></i> Mon compte</a></li>
+                        <li><a href="{{ path('show_orders') }}"><i class="fa fa-shopping-cart"></i> Mes commandes</a></li>
                         <li><a href="{{ path('fos_user_security_logout') }}"><i class="fa fa-sign-out"></i> Déconnexion</a></li>
                     </ul>
                 </div>
@@ -49,14 +49,14 @@
             <div class="col-sm-6">
                 <div class="logo">
                     <img style="height:150px; width:auto;" src="{{ asset('css/img/logo.png') }}">
-                    <h1 style="display:inline;"><a href="index.html">Sellerie <span>Xanthos</span></a></h1>
+                    <h1 style="display:inline;"><a href="{{ path('index') }}">Sellerie <span>Xanthos</span></a></h1>
                 </div>
             </div>
 
             <div class="col-sm-6">
                 {% if is_granted('ROLE_USER') %}
                 <div class="shopping-item">
-                    <a href="cart.html">Cart - <span class="cart-amunt">0€</span> <i class="fa fa-shopping-cart"></i> <span class="product-count">0</span></a>
+                    <a href="{{ path('show_cart') }}">Panier - <span class="cart-amunt">{{ amount }} €</span> <i class="fa fa-shopping-cart"></i> <span class="product-count">{{ productCount }}</span></a>
                 </div>
                 {% else %}
                 <div class="shopping-item" style="margin-left:20px; background-color:#1abc9c;">
@@ -84,7 +84,7 @@
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li class="active"><a href="index.html">Accueil</a></li>
+                    <li><a href="{{ path('index') }}">Accueil</a></li>
                     {% for category in categorys %}
                         <li><a href="{{ path('show_category', {'id' : category.id}) }}">{{ category }}</a></li>
                     {% endfor %}

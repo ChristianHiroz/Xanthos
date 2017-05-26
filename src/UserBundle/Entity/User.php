@@ -2,6 +2,8 @@
 
 namespace UserBundle\Entity;
 
+use Doctrine\Common\Collections\ArrayCollection;
+use ECommerceBundle\Entity\Cart;
 use FOS\UserBundle\Model\User as BaseUser;
 use Doctrine\ORM\Mapping as ORM;
 
@@ -23,10 +25,70 @@ class User extends BaseUser
     protected $id;
 
 
+    /**
+     * @var Cart
+     *
+     * @ORM\OneToOne(targetEntity="\ECommerceBundle\Entity\Cart", cascade={"persist"})
+     */
+    private $cart;
+
+
+    /**
+     * @var Cart
+     *
+     * @ORM\OneToMany(targetEntity="\ECommerceBundle\Entity\Order", cascade={"persist"}, mappedBy="user")
+     */
+    private $orders;
+
+
     public function __construct()
     {
         parent::__construct();
-        // your own logic
+        $this->orders = new ArrayCollection();
+    }
+
+    /**
+     * @return Cart
+     */
+    public function getCart()
+    {
+        return $this->cart;
+    }
+
+    /**
+     * @param Cart $cart
+     */
+    public function setCart($cart)
+    {
+        $this->cart = $cart;
+    }
+
+    /**
+     * @return Cart
+     */
+    public function getOrders()
+    {
+        return $this->orders;
+    }
+
+    /**
+     * @param Cart $orders
+     */
+    public function setOrders($orders)
+    {
+        $this->orders = $orders;
+    }
+
+    /**
+     * @param $order
+     */
+    public function addOrder($order){
+        $this->orders[] = $order;
+    }
+
+    public function __toString()
+    {
+        return $this->getUsername();
     }
 }
 

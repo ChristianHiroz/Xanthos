@@ -3,9 +3,12 @@
 namespace CoreBundle\Controller;
 
 use ECommerceBundle\Entity\Category;
+use ECommerceBundle\Entity\Product;
+use ECommerceBundle\Repository\ProductRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
+use UserBundle\Entity\User;
 
 class DefaultController extends Controller
 {
@@ -15,6 +18,23 @@ class DefaultController extends Controller
      */
     public function indexAction()
     {
-        return array('categorys' => $this->getDoctrine()->getManager()->getRepository(Category::class)->findBy(array('mainCategory' => true)));
+        /** @var ProductRepository $repository */
+        $repository = $this->getDoctrine()->getRepository(Product::class);
+
+        /** @var User $user */
+        $user = $this->getUser();
+
+        $products = $repository->getLastProducts();
+        $amount = 0;
+        $productCount = 0;
+
+        if($user->getCart()){
+            $cart = $user->getCart();
+            foreach ($cart->getProducts() as $product){
+                $amount += $product->getPrice();
+                $productCount++;
+            }
+        }
+        return array('amount' => $amount, 'productCount' => $productCount, 'products' => $products, 'categorys' => $this->getDoctrine()->getManager()->getRepository(Category::class)->findBy(array('mainCategory' => true)));
     }
 }

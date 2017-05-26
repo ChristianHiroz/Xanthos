@@ -5,6 +5,7 @@ namespace ECommerceBundle\Entity;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\Mapping as ORM;
 use ECommerceBundle\ECommerceBundle;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * Category
@@ -40,9 +41,16 @@ class Category
     /**
      * @var Category
      *
-     * @ORM\OneToMany(targetEntity="\ECommerceBundle\Entity\Category", mappedBy="id")
+     * @ORM\OneToMany(targetEntity="\ECommerceBundle\Entity\Category", mappedBy="masterCategory")
      */
     private $subCategorys;
+
+    /**
+     * @var Category
+     *
+     * @ORM\ManyToOne(targetEntity="\ECommerceBundle\Entity\Category", inversedBy="subCategorys", cascade={"persist"})
+     */
+    private $masterCategory;
 
     /**
      * @var Category
@@ -50,6 +58,14 @@ class Category
      * @ORM\OneToMany(targetEntity="\ECommerceBundle\Entity\Product", mappedBy="category")
      */
     private $products;
+
+    /**
+     * @ORM\Column(type="string")
+     *
+     * @Assert\NotBlank(message="Please, upload the image as a jpeg file.")
+     * @Assert\File(mimeTypes={ "image/jpeg" })
+     */
+    private $picture;
 
     public function __construct()
     {
@@ -175,6 +191,39 @@ class Category
     public function setProducts(Category $products)
     {
         $this->products = $products;
+    }
+
+    /**
+     * @return string
+     */
+    public function getPicture()
+    {
+        return $this->picture;
+    }
+
+    /**
+     * @param string $picture
+     */
+    public function setPicture($picture)
+    {
+        $this->picture = $picture;
+    }
+
+    /**
+     * @return Category
+     */
+    public function getMasterCategory()
+    {
+        return $this->masterCategory;
+    }
+
+    /**
+     * @param Category $masterCategory
+     */
+    public function setMasterCategory($masterCategory)
+    {
+        $this->masterCategory = $masterCategory;
+        $masterCategory->addCategory($this);
     }
 }
 

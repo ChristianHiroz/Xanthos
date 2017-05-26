@@ -2,6 +2,7 @@
 
 namespace ECommerceBundle\Listener;
 
+use ECommerceBundle\Entity\Category;
 use Symfony\Component\HttpFoundation\File\File;
 use Symfony\Component\HttpFoundation\File\UploadedFile;
 use Doctrine\ORM\Event\LifecycleEventArgs;
@@ -34,19 +35,31 @@ class UploadListener
 
     private function uploadFile($entity)
     {
-        // upload only works for Product entities
-        if (!$entity instanceof Product) {
-            return;
+        // upload only works for Product entities or Category entity
+        if ($entity instanceof Product) {
+            $file = $entity->getFile();
+
+            // only upload new files
+            if (!$file instanceof UploadedFile) {
+                return;
+            }
+
+            $fileName = $this->uploader->upload($file);
+            $entity->setFile($fileName);
+        }elseif ($entity instanceof Category) {
+            $file = $entity->getPicture();
+
+            // only upload new files
+            if (!$file instanceof UploadedFile) {
+                return;
+            }
+
+            $fileName = $this->uploader->upload($file);
+            $entity->setPicture($fileName);
+
         }
 
-        $file = $entity->getFile();
+        return;
 
-        // only upload new files
-        if (!$file instanceof UploadedFile) {
-            return;
-        }
-
-        $fileName = $this->uploader->upload($file);
-        $entity->setFile($fileName);
     }
 }

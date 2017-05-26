@@ -3,6 +3,7 @@
 namespace ECommerceBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * Product
@@ -36,9 +37,9 @@ class Product
     private $description;
 
     /**
-     * @var int
+     * @var float
      *
-     * @ORM\Column(name="price", type="integer")
+     * @ORM\Column(name="price", type="float")
      */
     private $price;
 
@@ -53,9 +54,11 @@ class Product
     /**
      * @ORM\Column(type="string", name="media")
      *
+     * @Assert\NotBlank(message="Please, upload the image as a jpeg file.")
+     * @Assert\File(mimeTypes={ "image/jpeg" })
+     *
      */
     private $file;
-
 
     /**
      * Get id
@@ -118,7 +121,7 @@ class Product
     /**
      * Set price
      *
-     * @param integer $price
+     * @param float $price
      *
      * @return Product
      */
@@ -132,7 +135,7 @@ class Product
     /**
      * Get price
      *
-     * @return int
+     * @return float
      */
     public function getPrice()
     {
