@@ -68,9 +68,8 @@ class Category
     private $products;
 
     /**
-     * @ORM\Column(type="string")
+     * @ORM\Column(type="string", nullable=true)
      *
-     * @Assert\NotBlank(message="Please, upload the image as a jpeg file.")
      * @Assert\File(mimeTypes={ "image/jpeg" })
      */
     private $picture;
