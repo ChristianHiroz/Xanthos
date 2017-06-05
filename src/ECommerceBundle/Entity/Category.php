@@ -49,6 +49,7 @@ class Category
      * @var Category
      *
      * @ORM\ManyToOne(targetEntity="\ECommerceBundle\Entity\Category", inversedBy="subCategorys", cascade={"persist"})
+     * @ORM\JoinColumn(name="master_category_id", referencedColumnName="id", nullable=true)
      */
     private $masterCategory;
 
@@ -220,7 +221,7 @@ class Category
     /**
      * @param Category $masterCategory
      */
-    public function setMasterCategory($masterCategory)
+    public function setMasterCategory($masterCategory = null)
     {
         $this->masterCategory = $masterCategory;
         $masterCategory->addCategory($this);
