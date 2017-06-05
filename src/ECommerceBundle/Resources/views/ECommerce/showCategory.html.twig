@@ -13,7 +13,7 @@
             </div>
         </div>
     </div>
-    {% if category.isMainCategory() %}
+    {% if category.isMainCategory() OR category.isSecondaryCategory() %}
     <div class="single-product-area">
         <div class="zigzag-bottom"></div>
             <div class="container">

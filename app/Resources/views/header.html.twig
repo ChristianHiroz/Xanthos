@@ -86,7 +86,9 @@
                 <ul class="nav navbar-nav">
                     <li><a href="{{ path('index') }}">Accueil</a></li>
                     {% for category in categorys %}
+                        {% if category.isMainCategory() %}
                         <li><a href="{{ path('show_category', {'id' : category.id}) }}">{{ category }}</a></li>
+                        {% endif %}
                     {% endfor %}
                 </ul>
             </div>
