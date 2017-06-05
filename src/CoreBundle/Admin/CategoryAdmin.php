@@ -12,6 +12,7 @@ class CategoryAdmin extends AbstractAdmin
     {
         $formMapper->add('name', 'text', array('label' => 'Nom'));
         $formMapper->add('mainCategory', 'choice', array('label' => 'Catégorie principale', 'choices' => array('Oui' => 1, 'Non' => 0)));
+        $formMapper->add('secondaryCategory', 'choice', array('label' => 'Catégorie secondaire', 'choices' => array('Oui' => 1, 'Non' => 0)));
         $formMapper->add('masterCategory', 'sonata_type_model', array('label' => 'Catégorie parente'));
         $formMapper->add('picture', 'file', array('label' => 'Image', 'data_class' => NULL));
     }
@@ -20,11 +21,13 @@ class CategoryAdmin extends AbstractAdmin
     {
         $datagridMapper->add('name', null, array('label' => 'Nom'));
         $datagridMapper->add('mainCategory', null, array('label' => 'Catégorie principale', 'choices' => array(1 => 'Oui', 0 => 'Non')));
+        $datagridMapper->add('secondaryCategory', null, array('label' => 'Catégorie secondaire', 'choices' => array(1 => 'Oui', 0 => 'Non')));
     }
 
     protected function configureListFields(ListMapper $listMapper)
     {
         $listMapper->addIdentifier('name', null, array('label' => 'Nom'));
         $listMapper->add('mainCategory', null, array('label' => 'Catégorie principale', 'choices' => array(1 => 'Oui', 0 => 'Non')));
+        $listMapper->add('secondaryCategory', null, array('label' => 'Catégorie secondaire', 'choices' => array(1 => 'Oui', 0 => 'Non')));
     }
 }

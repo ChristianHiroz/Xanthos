@@ -38,6 +38,14 @@ class Category
      */
     private $mainCategory;
 
+
+    /**
+     * @var bool
+     *
+     * @ORM\Column(name="secondaryCategory", type="boolean")
+     */
+    private $secondaryCategory;
+
     /**
      * @var Category
      *
@@ -133,6 +141,22 @@ class Category
     }
 
     /**
+     * @return bool
+     */
+    public function isSecondaryCategory()
+    {
+        return $this->secondaryCategory;
+    }
+
+    /**
+     * @param bool $secondaryCategory
+     */
+    public function setSecondaryCategory($secondaryCategory)
+    {
+        $this->secondaryCategory = $secondaryCategory;
+    }
+
+    /**
      * Set subCategorys
      *
      * @param ArrayCollection $subCategorys
@@ -167,14 +191,6 @@ class Category
         $this->subCategorys[] = $category;
 
         return $this;
-    }
-
-
-    /**
-     * @return string
-     */
-    public function __toString(){
-        return $this->name;
     }
 
     /**
@@ -224,6 +240,13 @@ class Category
     {
         $this->masterCategory = $masterCategory;
         $masterCategory->addCategory($this);
+    }
+
+    /**
+     * @return string
+     */
+    public function __toString(){
+        return $this->name;
     }
 }
 
