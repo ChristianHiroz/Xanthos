@@ -88,3 +88,12 @@ sonata_admin:
     title_logo: favicon.ico
     templates:
             layout:               ::standard_layout.html.twig
+
+#lexik_paybox:
+#    parameters:
+#        production: false        # Switches between Paybox test and production servers (preprod-tpe <> tpe)
+#        site:        '9999999'   # Site number provided by the bank
+#        rank:        '99'        # Rank number provided by the bank
+#        login:       '999999999' # Customer's login provided by Paybox
+#        hmac:
+#            key: '01234...BCDEF' # Key used to compute the hmac hash, provided by Paybox

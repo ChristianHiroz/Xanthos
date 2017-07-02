@@ -32,8 +32,11 @@
                                         <ins>{{ product.price }} €</ins>
                                     </div>
 
+                                    {% if is_granted('ROLE_USER') %}
                                     <a class="add_to_cart_button" href="{{ path('add_to_cart', {'productId' : product.id}) }}">Ajouter au panier</a>
-
+                                    {% else %}
+                                        <a class="add_to_cart_button" href="{{ path('fos_user_security_login') }}">Se connecter</a>
+                                    {% endif %}
                                     <div role="tabpanel">
                                         <ul class="product-tab" role="tablist">
                                             <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">Description</a></li>

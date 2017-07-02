@@ -26,11 +26,13 @@ class ECommerceController extends Controller
         $amount = 0;
         $productCount = 0;
 
-        if($user->getCart()){
-            $cart = $user->getCart();
-            foreach ($cart->getProducts() as $product){
-                $amount += $product->getPrice();
-                $productCount++;
+        if($user){
+            if($user->getCart()){
+                $cart = $user->getCart();
+                foreach ($cart->getProducts() as $product){
+                    $amount += $product->getPrice();
+                    $productCount++;
+                }
             }
         }
 
@@ -50,11 +52,13 @@ class ECommerceController extends Controller
         $amount = 0;
         $productCount = 0;
 
-        if($user->getCart()){
-            $cart = $user->getCart();
-            foreach ($cart->getProducts() as $product){
-                $amount += $product->getPrice();
-                $productCount++;
+        if($user){
+            if($user->getCart()){
+                $cart = $user->getCart();
+                foreach ($cart->getProducts() as $product){
+                    $amount += $product->getPrice();
+                    $productCount++;
+                }
             }
         }
         return array('product' => $product, 'categorys' => $this->getDoctrine()->getManager()->getRepository(Category::class)->findBy(array('mainCategory' => true)), 'amount' => $amount, 'productCount' => $productCount);

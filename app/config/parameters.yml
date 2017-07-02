@@ -1,7 +1,7 @@
 # This file is auto-generated during the composer install
 parameters:
     database_host: mysqldb
-    database_port: null
+    database_port: 3306
     database_name: xanthos
     database_user: root
     database_password: poneyDesBois
