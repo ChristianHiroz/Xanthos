@@ -28,9 +28,6 @@ class UploadListener
 
     public function preUpdate(PreUpdateEventArgs $args)
     {
-        $entity = $args->getEntity();
-
-        $this->uploadFile($entity);
     }
 
     private function uploadFile($entity)

@@ -89,11 +89,19 @@ sonata_admin:
     templates:
             layout:               ::standard_layout.html.twig
 
-#lexik_paybox:
-#    parameters:
-#        production: false        # Switches between Paybox test and production servers (preprod-tpe <> tpe)
-#        site:        '9999999'   # Site number provided by the bank
-#        rank:        '99'        # Rank number provided by the bank
-#        login:       '999999999' # Customer's login provided by Paybox
-#        hmac:
-#            key: '01234...BCDEF' # Key used to compute the hmac hash, provided by Paybox
+lexik_paybox:
+    parameters:
+        production: false        # Switches between Paybox test and production servers (preprod-tpe <> tpe)
+        site:        '1724411'   # Site number provided by the bank
+        rank:        '01'        # Rank number provided by the bank
+        login:       '711892279' # Customer's login provided by Paybox
+        hmac:
+            key: '81007dc0c264b2d515e3debc516d929f59f3cdc0c6bdd5541baafc00f23f41e615d3b0b91c6c66ab393e60e6cedc2a65cd775b1bca157a728d9bfd34eb2266b7' # Key used to compute the hmac hash, provided by Paybox
+    servers:
+        system:
+            preprod:
+                protocol: 'https'
+                host: 'preprod-ppps.e-transactions.fr'
+                system_path: '/PPPS.php'
+
+            #poney26Xanthos@

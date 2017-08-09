@@ -14,3 +14,18 @@ services:
         arguments: [~, ECommerceBundle\Entity\Order, ~]
         tags:
             - { name: sonata.admin, manager_type: orm, label: Commandes, group: Vente }
+    admin.size:
+        class: CoreBundle\Admin\SizeAdmin
+        arguments: [~, ECommerceBundle\Entity\Size, ~]
+        tags:
+            - { name: sonata.admin, manager_type: orm, label: Tailles, group: Vente, show_in_dashboard: false }
+    admin.color:
+        class: CoreBundle\Admin\ColorAdmin
+        arguments: [~, ECommerceBundle\Entity\Color, ~]
+        tags:
+            - { name: sonata.admin, manager_type: orm, label: Couleurs, group: Vente, show_in_dashboard: false }
+    admin.promotion:
+        class: CoreBundle\Admin\PromotionAdmin
+        arguments: [~, ECommerceBundle\Entity\Promotion, ~]
+        tags:
+            - { name: sonata.admin, manager_type: orm, label: Promotions, group: Vente, show_in_dashboard: false }

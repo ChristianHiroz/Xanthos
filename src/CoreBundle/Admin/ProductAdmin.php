@@ -1,6 +1,7 @@
 <?php
 namespace CoreBundle\Admin;
 
+use ECommerceBundle\Entity\Product;
 use Sonata\AdminBundle\Admin\AbstractAdmin;
 use Sonata\AdminBundle\Datagrid\ListMapper;
 use Sonata\AdminBundle\Datagrid\DatagridMapper;
@@ -10,11 +11,32 @@ class ProductAdmin extends AbstractAdmin
 {
     protected function configureFormFields(FormMapper $formMapper)
     {
+        /** @var Product $subject */
+        $subject = $this->getSubject();
+
         $formMapper->add('name', 'text', array('label' => 'Nom'));
         $formMapper->add('description', 'text', array('label' => 'Description'));
-        $formMapper->add('price', 'integer', array('label' => 'Prix'));
+        $formMapper->add('price', 'number', array('label' => 'Prix'));
         $formMapper->add('category', 'sonata_type_model', array('label' => 'Catégorie'));
-        $formMapper->add('file', 'file', array('label' => 'Image', 'data_class' => NULL));
+
+
+        if (!$subject->getId()) {
+            // The field will only be added when the edited item is created
+            $formMapper->add('file', 'file', array('label' => 'Image', 'data_class' => NULL));
+        }else {
+            $subject->setFile($subject->getFile());
+        }
+
+        $formMapper->add('sizes', 'sonata_type_collection',
+            array(
+                'label' => 'Tailles',
+                'by_reference' => false
+            ),
+            array(
+                'edit' => 'inline',
+                'inline' => 'table',
+                'sortable' => 'position')
+        );
 
     }
 

@@ -10,6 +10,8 @@ use ECommerceBundle\Entity\Product;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
+use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\Routing\Generator\UrlGeneratorInterface;
 use UserBundle\Entity\User;
 
 class ECommerceController extends Controller
@@ -200,6 +202,94 @@ class ECommerceController extends Controller
 
 
     /**
+     * @Route("/payOrder/{id}", name="pay_order")
+     * @Template()
+     * @param $id
+     * @return array|\Symfony\Component\HttpFoundation\RedirectResponse
+     */
+    public function payOrderAction($id)
+    {
+        /** @var Order $order */
+        $order = $this->getDoctrine()->getRepository(Order::class)->find($id);
+
+        if(!$order || $order->isStatus()){
+            return $this->redirect($this->generateUrl('index'));
+        }else {
+            /** @var User $user */
+            $user = $this->getUser();
+            $amount = 0;
+            $productCount = 0;
+
+            if($user->getCart()){
+                $cart = $user->getCart();
+                foreach ($cart->getProducts() as $product){
+                    $amount += $product->getPrice();
+                    $productCount++;
+                }
+            }
+
+            return array('order' => $order, 'user' => $user, 'amount' => $amount, 'productCount' => $productCount, 'categorys' => $this->getDoctrine()->getManager()->getRepository(Category::class)->findBy(array('mainCategory' => true)));
+        }
+
+
+    }
+
+    /**
+     * @Route("/payment/{id}", name="payment")
+     * @Template()
+     * @param $id
+     * @param Request $request
+     * @return \Symfony\Component\HttpFoundation\Response
+     */
+    public function paymentAction($id,Request $request)
+    {
+        /** @var Order $order */
+        $order = $this->getDoctrine()->getRepository(Order::class)->find($id);
+
+        $paybox = $this->get('lexik_paybox.request_handler');
+        $paybox->setParameters(array(
+            'PBX_CMD'          => 'CMD'.time(),
+            'PBX_DEVISE'       => '978',
+            'PBX_PORTEUR'      => $request->get('card_number'),
+            'PBX_RETOUR'       => 'Mt:M;Ref:R;Auto:A;Erreur:E',
+            'PBX_TOTAL'        => $order->getPrice(),
+            'PBX_TYPEPAIEMENT' => 'CARTE',
+            'PBX_TYPECARTE'    => $request->get('card_type'),
+//            'PBX_EFFECTUE'     => $this->generateUrl('lexik_paybox_sample_return', array('status' => 'success'), true),
+//            'PBX_REFUSE'       => $this->generateUrl('lexik_paybox_sample_return', array('status' => 'denied'), true),
+//            'PBX_ANNULE'       => $this->generateUrl('lexik_paybox_sample_return', array('status' => 'canceled'), true),
+            'PBX_RUF1'         => 'POST',
+            'PBX_REPONDRE_A'   => $this->generateUrl('lexik_paybox_ipn', array('time' => time()), UrlGeneratorInterface::ABSOLUTE_URL),
+        ));
+        return $this->render(
+            'LexikPayboxBundle:Sample:index.html.twig',
+            array(
+                'url'  => $paybox->getUrl(),
+                'form' => $paybox->getForm()->createView(),
+            )
+        );
+    }
+
+//
+//    /**
+//     * Exemple d'action de la page de confirmation vers laquelle
+//     * est redirigé l'utilisateur après un paiement.
+//     * Cette action ne doit contenir que de la logique de présentation.
+//     */
+//    public function returnAction($status)
+//    {
+//        return $this->render(
+//            'LexikPayboxBundle:Sample:return.html.twig',
+//            array(
+//                'status' => $status,
+//                'parameters' => $this->getRequest()->query,
+//            )
+//        );
+//    }
+
+
+
+        /**
      * @Route("/validateCart}", name="validate_cart")
      */
     public function validateCartAction(){

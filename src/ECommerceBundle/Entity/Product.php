@@ -2,6 +2,7 @@
 
 namespace ECommerceBundle\Entity;
 
+use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Validator\Constraints as Assert;
 
@@ -32,6 +33,13 @@ class Product
     /**
      * @var string
      *
+     * @ORM\Column(name="externalCode", type="string", length=50)
+     */
+    private $externalCode;
+
+    /**
+     * @var string
+     *
      * @ORM\Column(name="description", type="string", length=255)
      */
     private $description;
@@ -51,14 +59,23 @@ class Product
      */
     private $category;
 
+
+    /**
+     * @var Size
+     *
+     * @ORM\OneToMany(targetEntity="\ECommerceBundle\Entity\Size", mappedBy="product", cascade={"persist", "remove"},orphanRemoval=true)
+     */
+    private $sizes;
+
     /**
      * @ORM\Column(type="string", name="media")
-     *
-     * @Assert\NotBlank(message="Please, upload the image as a jpeg file.")
-     * @Assert\File(mimeTypes={ "image/jpeg" })
-     *
      */
     private $file;
+
+    public function __construct()
+    {
+        $this->sizes = new ArrayCollection();
+    }
 
     /**
      * Get id
@@ -92,6 +109,24 @@ class Product
     public function getName()
     {
         return $this->name;
+    }
+
+    /**
+     * @return string
+     */
+    public function getExternalCode()
+    {
+        return $this->externalCode;
+    }
+
+    /**
+     * @param string $externalCode
+     * @return Product
+     */
+    public function setExternalCode($externalCode)
+    {
+        $this->externalCode = $externalCode;
+        return $this;
     }
 
     /**
@@ -187,6 +222,53 @@ class Product
     public function setFile($file)
     {
         $this->file = $file;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getSizes()
+    {
+        return $this->sizes;
+    }
+
+    /**
+     * @param mixed $sizes
+     * @return Product
+     */
+    public function setSizes($sizes)
+    {
+        $this->sizes = $sizes;
+
+        /** @var Size $size */
+        foreach ($sizes as $size) {
+            $size->setProduct($this);
+        }
+
+        return $this;
+    }
+
+    /**
+     * @param $size
+     * @return $this
+     */
+    public function addSize(Size $size)
+    {
+        $this->sizes[] = $size;
+        $size->setProduct($this);
+
+        return $this;
+    }
+
+    /**
+     * @param $size
+     * @return $this
+     */
+    public function removeSize($size)
+    {
+        $this->sizes->removeElement($size);
+
+        return $this;
     }
 }
 

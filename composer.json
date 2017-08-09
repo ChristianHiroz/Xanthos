@@ -33,7 +33,8 @@
         "sonata-project/doctrine-orm-admin-bundle": "^3.1",
         "knplabs/knp-menu-bundle": "^2.0",
         "sonata-project/core-bundle": "^3.1",
-        "sonata-project/block-bundle": "^3.2"
+        "sonata-project/block-bundle": "^3.2",
+        "lexik/paybox-bundle": "^1.0"
 
     },
     "require-dev": {

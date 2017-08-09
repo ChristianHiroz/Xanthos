@@ -31,9 +31,10 @@
                                         <td class="product-price">
                                             <span class="amount">
                                                 {% if order.status == true %}
-                                                    Traitée
+                                                    Payée
                                                 {% else %}
-                                                    En cours
+                                                    Paiement bientôt disponible !
+                                                    {#<a href="{{ path('pay_order', {'id' : order.id}) }}">Paiement en cours</a>#}
                                                 {% endif %}
                                             </span>
                                         </td>
