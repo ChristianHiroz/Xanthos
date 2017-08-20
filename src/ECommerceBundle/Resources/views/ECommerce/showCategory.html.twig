@@ -20,14 +20,16 @@
                 <div class="row">
                     {% for subCategory in category.subCategorys %}
                         <div class="col-md-3 col-sm-6">
-                            <div class="single-shop-product">
-                                <div class="product-upper">
-                                    {% if subCategory.picture %}
-                                        <img style="width: 100%; height:auto;" src="{{ asset('uploads/' ~ subCategory.picture) }}">
-                                    {% endif %}
+                            <a href="{{ path('show_category', {'id' : subCategory.id})}}">{
+                                <div class="single-shop-product">
+                                    <div class="product-upper">
+                                        {% if subCategory.picture %}
+                                            <img style="width: 100%; height:auto;" src="{{ asset('uploads/' ~ subCategory.picture) }}">
+                                        {% endif %}
+                                    </div>
+                                    <h2 style="text-align: center;">{ subCategory.name }}</h2>
                                 </div>
-                                <h2 style="text-align: center;"><a href="{{ path('show_category', {'id' : subCategory.id})}}">{{ subCategory.name }}</a></h2>
-                            </div>
+                            </a>
                         </div>
                     {% endfor %}
                 </div>
@@ -41,21 +43,23 @@
                 <div class="row">
                     {% for product in category.products %}
                         <div class="col-md-3 col-sm-6">
-                            <div class="single-shop-product">
-                                <div class="product-upper">
-                                    {% if product.file %}
-                                        <img style="width: 100%; height:auto;" src="{{ asset('uploads/' ~ product.file) }}">
-                                    {% endif %}
+                            <a href="{{ path('show_product', {'id' : product.id}) }}">
+                                <div class="single-shop-product">
+                                    <div class="product-upper">
+                                        {% if product.file %}
+                                            <img style="width: 100%; height:auto;" src="{{ asset('uploads/' ~ product.file) }}">
+                                        {% endif %}
+                                    </div>
+                                    <h2>{{ product.name }}</h2>
+                                    <div class="product-carousel-price">
+                                        <ins>{{ product.price }} €</ins>
+                                    </div>
+                                    {# TODO : reactivate #}
+                                    {#<div class="product-option-shop">#}
+                                        {#<a class="add_to_cart_button" data-quantity="1" data-product_sku="" data-product_id="70" rel="nofollow" href="/canvas/shop/?add-to-cart=70">Ajouter au panier</a>#}
+                                    {#</div>#}
                                 </div>
-                                <h2><a href="{{ path('show_product', {'id' : product.id}) }}">{{ product.name }}</a></h2>
-                                <div class="product-carousel-price">
-                                    <ins>{{ product.price }} €</ins>
-                                </div>
-                                {# TODO : reactivate #}
-                                {#<div class="product-option-shop">#}
-                                    {#<a class="add_to_cart_button" data-quantity="1" data-product_sku="" data-product_id="70" rel="nofollow" href="/canvas/shop/?add-to-cart=70">Ajouter au panier</a>#}
-                                {#</div>#}
-                            </div>
+                            </a>
                         </div>
                     {% endfor %}
                 </div>

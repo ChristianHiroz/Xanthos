@@ -29,3 +29,8 @@ services:
         arguments: [~, ECommerceBundle\Entity\Promotion, ~]
         tags:
             - { name: sonata.admin, manager_type: orm, label: Promotions, group: Vente, show_in_dashboard: false }
+    admin.user:
+        class: CoreBundle\Admin\UserAdmin
+        arguments: [~, UserBundle\Entity\User, ~]
+        tags:
+            - { name: sonata.admin, manager_type: orm, label: Utilisateurs, group: Utilisateurs,}
