@@ -18,6 +18,7 @@ class ProductAdmin extends AbstractAdmin
         $formMapper->add('description', 'text', array('label' => 'Description'));
         $formMapper->add('externalCode', 'text', array('label' => 'Code fournisseur'));
         $formMapper->add('price', 'number', array('label' => 'Prix'));
+        $formMapper->add('weight', 'number', array('label' => 'Poids (en gramme)'));
         $formMapper->add('category', 'sonata_type_model', array('label' => 'Catégorie'));
 
 

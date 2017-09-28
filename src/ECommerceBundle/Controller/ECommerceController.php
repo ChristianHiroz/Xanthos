@@ -86,7 +86,7 @@ class ECommerceController extends Controller
 
         /** @var Product $product */
         $product = $this->getDoctrine()->getRepository(Product::class)->findOneBy(array('id' => $productId));
-
+        $color = 
         $cart->addProduct($product);
         $em->persist($cart);
         $em->flush();

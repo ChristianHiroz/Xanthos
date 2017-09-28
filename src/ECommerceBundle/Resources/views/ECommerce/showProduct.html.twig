@@ -31,9 +31,19 @@
                                     <div class="product-inner-price">
                                         <ins>{{ product.price }} €</ins>
                                     </div>
-
                                     {% if is_granted('ROLE_USER') %}
-                                    <a class="add_to_cart_button" href="{{ path('add_to_cart', {'productId' : product.id}) }}">Ajouter au panier</a>
+                                    <form action="{{ path('add_to_cart', {'productId' : product.id}) }}">
+                                         <select name="picker" class="add_to_cart_button">
+                                            {% for size in product.sizes %}
+                                                {% for color in size.colors %}
+                                                    {% set price = size.price + color.price %}
+                                                <option value="{{ size.id }}/{{ color.id }}">{{ size }} / {{ color }} +{{ price }}€</option>
+                                                {% endfor %}
+                                            {% endfor %}
+                                         </select>
+                                        <br/> <br/>
+                                        <input value="Ajouter au panier" type="submit" id="addCart" class="add_to_cart_button" href="{{ path('add_to_cart', {'productId' : product.id}) }}">
+                                    </form>
                                     {% else %}
                                         <a class="add_to_cart_button" href="{{ path('fos_user_security_login') }}">Se connecter</a>
                                     {% endif %}

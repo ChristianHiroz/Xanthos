@@ -51,6 +51,13 @@ class Product
      */
     private $price;
 
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="weight", type="float")
+     */
+    private $weight;
+
 
     /**
      * @var Category
@@ -267,6 +274,25 @@ class Product
     public function removeSize($size)
     {
         $this->sizes->removeElement($size);
+
+        return $this;
+    }
+
+    /**
+     * @return float
+     */
+    public function getWeight()
+    {
+        return $this->weight;
+    }
+
+    /**
+     * @param float $weight
+     * @return $this
+     */
+    public function setWeight($weight)
+    {
+        $this->weight = $weight;
 
         return $this;
     }
