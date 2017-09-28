@@ -241,7 +241,7 @@ class ECommerceController extends Controller
      * @param Request $request
      * @return \Symfony\Component\HttpFoundation\Response
      */
-    public function paymentAction($id,Request $request)
+    public function paymentAction($id, Request $request)
     {
         /** @var Order $order */
         $order = $this->getDoctrine()->getRepository(Order::class)->find($id);
@@ -250,17 +250,18 @@ class ECommerceController extends Controller
         $paybox->setParameters(array(
             'PBX_CMD'          => 'CMD'.time(),
             'PBX_DEVISE'       => '978',
-            'PBX_PORTEUR'      => $request->get('card_number'),
+            'PBX_PORTEUR'      => $this->getUser()->getEmail(),
             'PBX_RETOUR'       => 'Mt:M;Ref:R;Auto:A;Erreur:E',
             'PBX_TOTAL'        => $order->getPrice(),
             'PBX_TYPEPAIEMENT' => 'CARTE',
-            'PBX_TYPECARTE'    => $request->get('card_type'),
-//            'PBX_EFFECTUE'     => $this->generateUrl('lexik_paybox_sample_return', array('status' => 'success'), true),
-//            'PBX_REFUSE'       => $this->generateUrl('lexik_paybox_sample_return', array('status' => 'denied'), true),
-//            'PBX_ANNULE'       => $this->generateUrl('lexik_paybox_sample_return', array('status' => 'canceled'), true),
+            'PBX_TYPECARTE'    => 'VISA',
+            'PBX_EFFECTUE'     => $this->generateUrl('payment_return', array('status' => 'success'), true),
+            'PBX_REFUSE'       => $this->generateUrl('payment_return', array('status' => 'denied'), true),
+            'PBX_ANNULE'       => $this->generateUrl('payment_return', array('status' => 'canceled'), true),
             'PBX_RUF1'         => 'POST',
             'PBX_REPONDRE_A'   => $this->generateUrl('lexik_paybox_ipn', array('time' => time()), UrlGeneratorInterface::ABSOLUTE_URL),
         ));
+
         return $this->render(
             'LexikPayboxBundle:Sample:index.html.twig',
             array(
@@ -286,6 +287,17 @@ class ECommerceController extends Controller
 //            )
 //        );
 //    }
+
+    /**
+     * @Route("/paymentReturn/{status}", name="payment_return")
+     * @Template()
+     * @param $status
+     * @return \Symfony\Component\HttpFoundation\Response
+     */
+    public function paymentReturnAction($status)
+    {
+        var_dump($status);exit;
+    }
 
 
 

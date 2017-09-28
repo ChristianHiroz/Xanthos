@@ -21,6 +21,11 @@ admin_area:
     prefix: /admin
 
 # Lexik Paybox Bundle
+lexik_paybox_sample:
+    prefix: /sample
+    resource: '@LexikPayboxBundle/Resources/config/routing_sample.yml'
+
+# Lexik Paybox Bundle
 lexik_paybox:
     resource: '@LexikPayboxBundle/Resources/config/routing.yml'
 

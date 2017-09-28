@@ -1,14 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="PublishConfigData" serverName="xanthos.dev">
-    <serverData>
-      <paths name="xanthos.dev">
-        <serverdata>
-          <mappings>
-            <mapping local="$PROJECT_DIR$" web="/web/app_dev.php" />
-          </mappings>
-        </serverdata>
-      </paths>
-    </serverData>
-  </component>
+  <component name="PublishConfigData" serverName="FoodMeUp" />
 </project>
