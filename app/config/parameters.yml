@@ -1,12 +1,17 @@
 # This file is auto-generated during the composer install
 parameters:
-    database_host: localhost
+    database_host: mysqldb
     database_port: 3306
     database_name: xanthos
     database_user: root
-    database_password: null
+    database_password: poneyDesBois
     mailer_transport: smtp
     mailer_host: 127.0.0.1
     mailer_user: null
     mailer_password: null
     secret: 2e64d2fed7b450b9d73a60359ddc7f7162b81eb7
+    site: '1724411'   # Site number provided by the bank
+    rank: '01'        # Rank number provided by the bank
+    login: '711892279' # Customer's login provided by Paybox
+    key: '81007dc0c264b2d515e3debc516d929f59f3cdc0c6bdd5541baafc00f23f41e615d3b0b91c6c66ab393e60e6cedc2a65cd775b1bca157a728d9bfd34eb2266b7' # Key used to compute the hmac hash, provided by Paybox
+    url: 'https://preprod-ppps.e-transactions.fr/PPPS.php'

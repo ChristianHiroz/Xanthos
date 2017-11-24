@@ -5,6 +5,7 @@ namespace ECommerceBundle\Controller;
 use Doctrine\Common\Collections\ArrayCollection;
 use ECommerceBundle\Entity\Cart;
 use ECommerceBundle\Entity\Category;
+use ECommerceBundle\Entity\Color;
 use ECommerceBundle\Entity\Order;
 use ECommerceBundle\Entity\Product;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
@@ -31,10 +32,8 @@ class ECommerceController extends Controller
         if($user){
             if($user->getCart()){
                 $cart = $user->getCart();
-                foreach ($cart->getProducts() as $product){
-                    $amount += $product->getPrice();
-                    $productCount++;
-                }
+                $amount = $cart->getPrice();
+                $productCount = $cart->getProducts()->count();
             }
         }
 
@@ -57,10 +56,8 @@ class ECommerceController extends Controller
         if($user){
             if($user->getCart()){
                 $cart = $user->getCart();
-                foreach ($cart->getProducts() as $product){
-                    $amount += $product->getPrice();
-                    $productCount++;
-                }
+                $amount = $cart->getPrice();
+                $productCount = $cart->getProducts()->count();
             }
         }
         return array('product' => $product, 'categorys' => $this->getDoctrine()->getManager()->getRepository(Category::class)->findBy(array('mainCategory' => true)), 'amount' => $amount, 'productCount' => $productCount);
@@ -69,7 +66,7 @@ class ECommerceController extends Controller
     /**
      * @Route("/addToCart/{productId}", name="add_to_cart")
      */
-    public function addToCartAction($productId){
+    public function addToCartAction($productId, Request $request){
         /** @var User $user */
         $user = $this->getUser();
         $em = $this->getDoctrine()->getManager();
@@ -86,8 +83,14 @@ class ECommerceController extends Controller
 
         /** @var Product $product */
         $product = $this->getDoctrine()->getRepository(Product::class)->findOneBy(array('id' => $productId));
-        $color = 
+        /** @var Color $color */
+        $color = $this->getDoctrine()->getRepository(Color::class)->findOneBy(array('id' => $request->query->get('picker')));
+        $price = $product->getPrice() + $color->getPrice() + $color->getSize()->getPrice();
+
         $cart->addProduct($product);
+        $cart->addColor($color);
+        $cart->setPrice($cart->getPrice() + $price);
+
         $em->persist($cart);
         $em->flush();
 
@@ -115,8 +118,13 @@ class ECommerceController extends Controller
 
         /** @var Product $product */
         $product = $this->getDoctrine()->getRepository(Product::class)->findOneBy(array('id' => $productId));
+        $id = $cart->getProducts()->indexOf($product);
+        $color = $cart->getColors()->get($id);
+        $price = $product->getPrice() + $color->getPrice() + $color->getSize()->getPrice();
 
         $cart->removeProduct($product);
+        $cart->getColors()->removeElement($color);
+        $cart->setPrice($cart->getPrice() - $price);
         $em->persist($cart);
         $em->flush();
 
@@ -142,14 +150,9 @@ class ECommerceController extends Controller
             $cart = $user->getCart();
         }
 
-        $amount = 0;
-        $productCount = 0;
         /** @var Product $product */
-        foreach ($cart->getProducts() as $product){
-            $amount += $product->getPrice();
-            $productCount++;
-        }
-
+        $amount = $cart->getPrice();
+        $productCount = $cart->getProducts()->count();
         return array('user' => $user, 'cart' => $cart, 'amount' => $amount, 'productCount' => $productCount, 'categorys' => $this->getDoctrine()->getManager()->getRepository(Category::class)->findBy(array('mainCategory' => true)));
 
     }
@@ -166,10 +169,8 @@ class ECommerceController extends Controller
 
         if($user->getCart()){
             $cart = $user->getCart();
-            foreach ($cart->getProducts() as $product){
-                $amount += $product->getPrice();
-                $productCount++;
-            }
+            $amount = $cart->getPrice();
+            $productCount = $cart->getProducts()->count();
         }
 
         $orders = $user->getOrders();
@@ -190,10 +191,9 @@ class ECommerceController extends Controller
 
         if($user->getCart()){
             $cart = $user->getCart();
-            foreach ($cart->getProducts() as $product){
-                $amount += $product->getPrice();
-                $productCount++;
-            }
+            $amount = $cart->getPrice();
+            $productCount = $cart->getProducts()->count();
+
         }
 
         $order = $this->getDoctrine()->getRepository(Order::class)->find($id);
@@ -217,21 +217,20 @@ class ECommerceController extends Controller
         }else {
             /** @var User $user */
             $user = $this->getUser();
+            if(!$user->getRelayId()) {
+                return $this->redirect($this->generateUrl('choose_relay'));
+            }
             $amount = 0;
             $productCount = 0;
 
             if($user->getCart()){
                 $cart = $user->getCart();
-                foreach ($cart->getProducts() as $product){
-                    $amount += $product->getPrice();
-                    $productCount++;
-                }
+                $amount = $cart->getPrice();
+                $productCount = $cart->getProducts()->count();
             }
 
             return array('order' => $order, 'user' => $user, 'amount' => $amount, 'productCount' => $productCount, 'categorys' => $this->getDoctrine()->getManager()->getRepository(Category::class)->findBy(array('mainCategory' => true)));
         }
-
-
     }
 
     /**
@@ -245,48 +244,65 @@ class ECommerceController extends Controller
     {
         /** @var Order $order */
         $order = $this->getDoctrine()->getRepository(Order::class)->find($id);
+        $date = new \DateTime();
 
-        $paybox = $this->get('lexik_paybox.request_handler');
-        $paybox->setParameters(array(
-            'PBX_CMD'          => 'CMD'.time(),
-            'PBX_DEVISE'       => '978',
-            'PBX_PORTEUR'      => $this->getUser()->getEmail(),
-            'PBX_RETOUR'       => 'Mt:M;Ref:R;Auto:A;Erreur:E',
-            'PBX_TOTAL'        => $order->getPrice(),
-            'PBX_TYPEPAIEMENT' => 'CARTE',
-            'PBX_TYPECARTE'    => 'VISA',
-            'PBX_EFFECTUE'     => $this->generateUrl('payment_return', array('status' => 'success'), true),
-            'PBX_REFUSE'       => $this->generateUrl('payment_return', array('status' => 'denied'), true),
-            'PBX_ANNULE'       => $this->generateUrl('payment_return', array('status' => 'canceled'), true),
-            'PBX_RUF1'         => 'POST',
-            'PBX_REPONDRE_A'   => $this->generateUrl('lexik_paybox_ipn', array('time' => time()), UrlGeneratorInterface::ABSOLUTE_URL),
-        ));
+        $msg ="VERSION=00104".
+            "&TYPE=00003".
+            "&SITE=".$this->getParameter('site').
+            "&RANG=".$this->getParameter('rank').
+            "&NUMQUESTION=".$order->getId().
+            "&MONTANT=".$order->getPrice().
+            "&DEVISE=978".
+            "&REFERENCE=XANTHOS".$order->getId().
+            "&PORTEUR=".$request->get('card_number').
+            "&HASH=SHA512".
+            "&DATEVAL=1017".
+            "&CVV=".$request->get('card_cvv').
+            "&ACTIVITE=024".
+            "&DATEQ="."01092017";
+//
+//        $myvars =
+//            'PBX_SITE=' . $this->getParameter('site') .
+//            '&PBX_RANG=' . $this->getParameter('rank') .
+//            '&PBX_IDENTIFIANT' . $this->getParameter('login') .
+//            'PBX_TOTAL' . $order->getPrice() .
+//            'PBX_DEVISE' . '978' .
+//            'PBX_CMD' . $order->getId() .
+//            'PBX_PORTEUR' . $user->getEmail() .
+//            'PBX_RETOUR' . 'Mt:M;Ref:R;Auto:A;Erreur:E' .
+//            'PBX_HASH' . 'SHA512' .
+//            'PBX_TIME' . $date->format('c');
+
+        $binKey = pack("H*", $this->getParameter('key'));
+        $hmac = strtoupper(hash_hmac('sha512', $msg, $binKey));
+
+        /** @var User $user */
+        $user = $this->getUser();
+        if($user->getCart()) {
+            $cart = $user->getCart();
+            $amount = $cart->getPrice();
+            $productCount = $cart->getProducts()->count();
+        }
 
         return $this->render(
-            'LexikPayboxBundle:Sample:index.html.twig',
+            'ECommerceBundle:ECommerce:validate.html.twig',
             array(
-                'url'  => $paybox->getUrl(),
-                'form' => $paybox->getForm()->createView(),
+                'categorys' => $this->getDoctrine()->getManager()->getRepository(Category::class)->findBy(array('mainCategory' => true)),
+                'numquestion' => $order->getId(),
+                'amount' => $amount,
+                'order_amount' => $order->getPrice(),
+                'reference' => "XANTHOS".$order->getId(),
+                'card_number' => $request->get('card_number'),
+                'card_cvv' => $request->get('card_cvv'),
+                'date' => "01092017",
+                'site'  => $this->getParameter('site'),
+                'rang'  => $this->getParameter('rank'),
+                'hmac' => $hmac,
+                'url' => $this->getParameter('url'),
+                'productCount' => $productCount
             )
         );
     }
-
-//
-//    /**
-//     * Exemple d'action de la page de confirmation vers laquelle
-//     * est redirigé l'utilisateur après un paiement.
-//     * Cette action ne doit contenir que de la logique de présentation.
-//     */
-//    public function returnAction($status)
-//    {
-//        return $this->render(
-//            'LexikPayboxBundle:Sample:return.html.twig',
-//            array(
-//                'status' => $status,
-//                'parameters' => $this->getRequest()->query,
-//            )
-//        );
-//    }
 
     /**
      * @Route("/paymentReturn/{status}", name="payment_return")
@@ -301,8 +317,8 @@ class ECommerceController extends Controller
 
 
 
-        /**
-     * @Route("/validateCart}", name="validate_cart")
+    /**
+     * @Route("/validateCart", name="validate_cart")
      */
     public function validateCartAction(){
         /** @var User $user */
@@ -313,28 +329,67 @@ class ECommerceController extends Controller
             return $this->redirect($this->generateUrl('index'));
         }
 
-        $amount = 0;
-        foreach ($cart->getProducts() as $product){
-            $amount += $product->getPrice();
-        }
 
-        if($amount == 0){
+        if($cart->getPrice() == 0){
             return $this->redirect($this->generateUrl('index'));
         }
 
         $order = new Order();
         $order->setProducts($cart->getProducts());
-        $order->setPrice($amount);
+        $order->setPrice($cart->getPrice());
         $order->setUser($user);
         $user->addOrder($order);
 
         $cart->setProducts(new ArrayCollection());
+        $cart->setColors(new ArrayCollection());
+        $cart->setPrice(0);
+        $cart->setWeight(0);
 
         $this->getDoctrine()->getManager()->persist($order);
         $this->getDoctrine()->getManager()->persist($cart);
         $this->getDoctrine()->getManager()->persist($user);
         $this->getDoctrine()->getManager()->flush();
 
+
+        return $this->redirect($this->generateUrl('show_orders'));
+    }
+
+    /**
+     * @Route("/chooseRelay", name="choose_relay")
+     * @Template()
+     */
+    public function chooseRelayAction()
+    {
+        /** @var User $user */
+        $user = $this->getUser();
+        $amount = 0;
+        $productCount = 0;
+
+        if($user->getCart()){
+            $cart = $user->getCart();
+            $amount = $cart->getPrice();
+            $productCount = $cart->getProducts()->count();
+        }
+
+        return array('user' => $user, 'amount' => $amount, 'productCount' => $productCount, 'categorys' => $this->getDoctrine()->getManager()->getRepository(Category::class)->findBy(array('mainCategory' => true)));
+    }
+
+    /**
+     * @Route("/validateRelay", name="validate_relay")
+     * @Template()
+     */
+    public function validateRelayAction(Request $request)
+    {
+        /** @var User $user */
+        $user = $this->getUser();
+
+        if($request->get('relayId')){
+            $user->setRelayId($request->get('relayId'));
+            $this->getDoctrine()->getManager()->persist($user);
+            $this->getDoctrine()->getManager()->flush($user);
+        }else {
+            return $this->redirect($this->generateUrl('choose_relay'));
+        }
 
         return $this->redirect($this->generateUrl('show_orders'));
     }

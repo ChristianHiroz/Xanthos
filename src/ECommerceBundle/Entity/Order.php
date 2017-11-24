@@ -24,11 +24,25 @@ class Order
     private $id;
 
     /**
+     * @var float
+     *
+     * @ORM\Column(name="weight", type="float")
+     */
+    private $weight;
+
+    /**
      * @var ArrayCollection
      *
      * @ORM\ManyToMany(targetEntity="\ECommerceBundle\Entity\Product")
      */
     private $products;
+
+    /**
+     * @var ArrayCollection
+     *
+     * @ORM\ManyToMany(targetEntity="\ECommerceBundle\Entity\Color")
+     */
+    private $colors;
 
     /**
      * @var User
@@ -65,6 +79,8 @@ class Order
     public function __construct()
     {
         $this->products = new ArrayCollection();
+        $this->colors = new ArrayCollection();
+        $this->weight = 0;
     }
 
     /**
@@ -83,16 +99,24 @@ class Order
 
     /**
      * @param Product $product
+     * @return $this
      */
-    public function addProduct(Product $product){
+    public function addProduct(Product $product)
+    {
         $this->products[] = $product;
+
+        return $this;
     }
 
     /**
      * @param Product $product
+     * @return $this
      */
-    public function removeProduct(Product $product){
+    public function removeProduct(Product $product)
+    {
         $this->products->removeElement($product);
+
+        return $this;
     }
 
     /**
@@ -103,6 +127,44 @@ class Order
     public function getProducts()
     {
         return $this->products;
+    }
+
+    /**
+     * @return ArrayCollection
+     */
+    public function getColors()
+    {
+        return $this->colors;
+    }
+
+    /**
+     * @param ArrayCollection $colors
+     */
+    public function setColors($colors)
+    {
+        $this->colors = $colors;
+    }
+
+    /**
+     * @param Color $color
+     * @return $this
+     */
+    public function addColor(Color $color)
+    {
+        $this->colors[] = $color;
+
+        return $this;
+    }
+
+    /**
+     * @param Color $color
+     * @return $this
+     */
+    public function removeColor(Color $color)
+    {
+        $this->colors->removeElement($color);
+
+        return $this;
     }
 
     /**
@@ -151,6 +213,25 @@ class Order
     public function setStatus($status)
     {
         $this->status = $status;
+    }
+
+    /**
+     * @return float
+     */
+    public function getWeight()
+    {
+        return $this->weight;
+    }
+
+    /**
+     * @param float $weight
+     * @return $this
+     */
+    public function setWeight($weight)
+    {
+        $this->weight = $weight;
+
+        return $this;
     }
 }
 

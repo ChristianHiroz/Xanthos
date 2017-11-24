@@ -30,10 +30,8 @@ class DefaultController extends Controller
 
             if($user->getCart()){
                 $cart = $user->getCart();
-                foreach ($cart->getProducts() as $product){
-                    $amount += $product->getPrice();
-                    $productCount++;
-                }
+                $amount = $cart->getPrice();
+                $productCount = $cart->getProducts()->count();
             }
         }else {
             return array('products' => $products, 'categorys' => $this->getDoctrine()->getManager()->getRepository(Category::class)->findBy(array('mainCategory' => true)));

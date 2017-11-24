@@ -17,41 +17,29 @@
                                         <th class="product-thumbnail">&nbsp;</th>
                                         <th class="product-name">Produit</th>
                                         <th class="product-price">Prix</th>
-                                        {#<th class="product-quantity">Quantity</th>#}
-                                        {#<th class="product-subtotal">Total</th>#}
                                     </tr>
                                     </thead>
                                     <tbody>
                                     {% for product in cart.products %}
-                                    <tr class="cart_item">
-                                        <td class="product-remove">
-                                            <a title="Remove this item" class="remove" href="{{ path('remove_from_cart', {'productId' : product.id}) }}">×</a>
-                                        </td>
+                                        {% set color = cart.colors[loop.index - 1] %}
+                                        {% set price = product.price + color.price + color.size.price %}
+                                        <tr class="cart_item">
+                                            <td class="product-remove">
+                                                <a title="Remove this item" class="remove" href="{{ path('remove_from_cart', {'productId' : product.id}) }}">×</a>
+                                            </td>
 
-                                        <td class="product-thumbnail">
-                                            <a href="{{ path('show_product', {'id' : product.id}) }}"><img width="145" height="145" class="shop_thumbnail" alt="" src="{{ asset('uploads/' ~ product.file) }}"></a>
-                                        </td>
+                                            <td class="product-thumbnail">
+                                                <a href="{{ path('show_product', {'id' : product.id}) }}"><img width="145" height="145" class="shop_thumbnail" alt="" src="{{ asset('uploads/' ~ product.file) }}"></a>
+                                            </td>
 
-                                        <td class="product-name">
-                                            <a href="{{ path('show_product', {'id' : product.id}) }}">{{ product.name }}</a>
-                                        </td>
+                                            <td class="product-name">
+                                                <a href="{{ path('show_product', {'id' : product.id}) }}">{{ product.name }} {{ color.name }} {{ color.size.name }}</a>
+                                            </td>
 
-                                        <td class="product-price">
-                                            <span class="amount">{{ product.price }} €</span>
-                                        </td>
-
-                                        {#<td class="product-quantity">#}
-                                            {#<div class="quantity buttons_added">#}
-                                                {#<input type="button" class="minus" value="-">#}
-                                                {#<input type="number" size="4" class="input-text qty text" title="Qty" value="1" min="0" step="1">#}
-                                                {#<input type="button" class="plus" value="+">#}
-                                            {#</div>#}
-                                        {#</td>#}
-
-                                        {#<td class="product-subtotal">#}
-                                            {#<span class="amount">£15.00</span>#}
-                                        {#</td>#}
-                                    </tr>
+                                            <td class="product-price">
+                                                <span class="amount">{{ price }} €</span>
+                                            </td>
+                                        </tr>
                                     {% endfor %}
                                     {#<tr>#}
                                         {#<td class="actions" colspan="6">#}

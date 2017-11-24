@@ -24,6 +24,12 @@ class User extends BaseUser
      */
     protected $id;
 
+    /**
+     * @var int
+     *
+     * @ORM\Column(name="relayId", type="string", nullable=true)
+     */
+    private $relayId;
 
     /**
      * @var Cart
@@ -45,6 +51,25 @@ class User extends BaseUser
     {
         parent::__construct();
         $this->orders = new ArrayCollection();
+    }
+
+    /**
+     * @return int
+     */
+    public function getRelayId()
+    {
+        return $this->relayId;
+    }
+
+    /**
+     * @param integer $relayId
+     * @return $this
+     */
+    public function setRelayId($relayId)
+    {
+        $this->relayId = $relayId;
+
+        return $this;
     }
 
     /**

@@ -23,12 +23,40 @@ class Cart
     private $id;
 
     /**
+     * @var float
+     *
+     * @ORM\Column(name="price", type="float")
+     */
+    private $price;
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="weight", type="float")
+     */
+    private $weight;
+
+    /**
      * @var ArrayCollection
      *
      * @ORM\ManyToMany(targetEntity="\ECommerceBundle\Entity\Product")
      */
     private $products;
 
+    /**
+     * @var ArrayCollection
+     *
+     * @ORM\ManyToMany(targetEntity="\ECommerceBundle\Entity\Color")
+     */
+    private $colors;
+
+    public function __construct()
+    {
+        $this->products = new ArrayCollection();
+        $this->colors = new ArrayCollection();
+        $this->weight = 0;
+        $this->price = 0;
+    }
 
     /**
      * Get id
@@ -38,11 +66,6 @@ class Cart
     public function getId()
     {
         return $this->id;
-    }
-
-    public function __construct()
-    {
-        $this->products = new ArrayCollection();
     }
 
     /**
@@ -81,6 +104,79 @@ class Cart
     public function getProducts()
     {
         return $this->products;
+    }
+
+    /**
+     * @return ArrayCollection
+     */
+    public function getColors()
+    {
+        return $this->colors;
+    }
+
+    /**
+     * @param ArrayCollection $colors
+     */
+    public function setColors($colors)
+    {
+        $this->colors = $colors;
+    }
+
+    /**
+     * @param Color $color
+     * @return $this
+     */
+    public function addColor(Color $color)
+    {
+        $this->colors[] = $color;
+
+        return $this;
+    }
+
+    /**
+     * @param Color $color
+     * @return $this
+     */
+    public function removeColor(Color $color)
+    {
+        $this->colors->removeElement($color);
+
+        return $this;
+    }
+
+    /**
+     * @return float
+     */
+    public function getWeight()
+    {
+        return $this->weight;
+    }
+
+    /**
+     * @param float $weight
+     * @return $this
+     */
+    public function setWeight($weight)
+    {
+        $this->weight = $weight;
+
+        return $this;
+    }
+
+    /**
+     * @return float
+     */
+    public function getPrice()
+    {
+        return $this->price;
+    }
+
+    /**
+     * @param float $price
+     */
+    public function setPrice($price)
+    {
+        $this->price = $price;
     }
 }
 

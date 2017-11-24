@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% block title %}Sellerie Xanthos{% endblock %}</title>
+    <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+
+    <!-- Google Fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Titillium+Web:400,200,300,700,600' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:400,700,300' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Raleway:400,100' rel='stylesheet' type='text/css'>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{{ asset('css/owl.carousel.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/responsive.css') }}">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+
+<!-- Appel de la librairie jQuery : c'est une librairie facilitant la programmation de script côté client -->
+    <!-- Cette librairie est obligatoire car elle est utilisée par le widget Mondial Relay, elle doit être appellée en avant celle du Widget Mondial Relay -->
+    <!-- Le symbole "$" commençant une instruction javascript sest caractéristique de l'utilisation de jQuery. -->
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+
+    <!-- Appel de la librairie Google Maps : c'est une librairie d'implémentation de cartographies -->
+    <!-- Cette librairie est obligatoire car elle est utilisée par le widget Mondial Relay -->
+    <script src="https://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyBSb6r5st8cMxy6RnUJ-Gx0YqKOjwg6GcE"></script>
+
+    <!-- Appel de la librairie Widget Mondial Relay : c'est la librairie permettant la sélection de Point Relais -->
+    <script type="text/javascript" src="https://widget.mondialrelay.com/parcelshop-picker/v3_0/scripts/jquery.plugin.mondialrelay.parcelshoppicker.js"></script>
+
+    <!-- Début d'un script -->
+    <script type="text/javascript">
+
+
+        // Avec jQuery, exécute le script entre accolades uniquement après le chargement complet de la page
+        $(document).ready(function () {
+
+            // Charge le widget dans la DIV d'id "Zone_Widget" avec les paramètres indiqués
+            $("#Zone_Widget").MR_ParcelShopPicker({
+                Target: "#Target_Widget"                                // Selecteur JQuery de l'élément dans lequel sera renvoyé l'ID du Point Relais sélectionné (généralement un champ input hidden)
+                , TargetDisplay: "#TargetDisplay_Widget"                // Selecteur JQuery de l'élément dans lequel sera renvoyé l'ID du Point Relais sélectionné (secondaire pour affichage)
+                , TargetDisplayInfoPR: "#TargetDisplayInfoPR_Widget"    // Selecteur JQuery de l'élément dans lequel seront renvoyé les coordonnées complètes de la selection de l'utilisateur
+                , Brand: "BDTEST  "                                     // Le code client Mondial Relay
+                                                                        // Lorsqu'il est indiqué "BDTEST  ", un message d'avertissement apprait pour avertir que ce sont les paramètres de test qui sont utilisés
+                , Country: "FR"                                         // Code ISO 2 lettres du pays utilisé pour la recherche
+                //,AllowedCountries: "FR"                               // Liste des pays selectionnable par l'utilisateur pour la recherche (codes ISO 2 lettres séparés par des virgules)
+                , PostCode: "26000"                                     // Code postal pour lancer une recherche par défaut
+                //,EnableGeolocalisatedSearch: ""                       // Active ou non la possibilité d'effectuer la recherche sur la position courante lorsque le navigateur de l'utilisateur supporte cette fonction (demande au navigateur)
+                , ColLivMod: "24R"                                      // Permet de filtrer les Points Relais selon le mode de livraison utilisé (Standard [24R], XL [24L], XXL [24X], Drive [DRI])
+                //,Weight: ""                                           // Permet de filtrer les Points Relais selon le Poids (en grammes) du colis à livrer
+                ,NbResults: "15"                                        // Nombre de Point Relais à renvoyer
+                ,SearchDelay: "15"                                      // Permet de spécifier le nombre de jour entre la recherche et la dépose du colis dans notre réseau
+                //,SearchFar: ""                                        // Permet de limiter la recherche des Points Relais à une distance maximum
+                //,CSS: "1"                                             // Permet de spécifier que vous souhaitez utiliser votre propre feuille de style CSS lorsque vous lui donnez la valeur "0"
+                //,MapScrollWheel: "false"                              // Active ou non le zoom on scroll sur la carte des résultats
+                //,MapStreetView: "false"                               // Active ou non le mode Street View sur la carte des résultats (attention aux quotas imposés par Google)
+                //,ShowResultsOnMap: "true"                             // Active ou non l'affichage des résultats sur une carte
+                , DisplayMapInfo: true
+                , OnParcelShopSelected:                                 // Permet l'appel d'une fonction lors de la selection d'un Point Relais
+                    function (data) {                                   // Implémentation de la fonction de traitement, le paramètre Data contient un objet avec les informations du Point Relais
+
+                        // Remplace les données de la balise ayant l'Id "cb_ID" par le contenu html de data.ID
+                        // "data" est le paramètre reçu par la fonction, sont contenu est inconnu à la compilation
+                        // "ID" est contenu dans "data", il pourrait y avoir une erreur si "ID" n'existe pas dans la variable "data" reçue en paramètre
+                        $("#cb_ID").html(data.ID);
+
+                        $("#cb_Nom").html(data.Nom);
+                        $("#cb_Adresse").html(data.Adresse1 + ' ' + data.Adresse2);
+                        $("#cb_CP").html(data.CP);
+                        $("#cb_Ville").html(data.Ville);
+                        $("#cb_Pays").html(data.Pays);
+                    }
+
+
+
+
+            });
+
+        });
+    </script>
+
+</head>
+<body>
+{%  include('header.html.twig') %}
+
+<style>
+    .MR-Widget{
+        width: 100% !important;
+        font-size: 14px !important;
+    }
+    .MRW-Results{
+        height:auto!important;
+    }
+
+    #MRW-Map{
+        height:750px!important;
+        width:750px!important;
+    }
+    .Arg2{
+        width: 100px!important;
+    }
+</style>
+<!-- C'est dans cette zone que le Widget sera chargé -->
+<div id="Zone_Widget" style="width:100%!important; font-size: 14px!important;"></div>
+
+<div style="padding:8px; overflow:auto; text-align:center;">
+    <div style="background:rgb(26, 188, 156);color:white;border:solid 1px #a5f913; padding:5px;">
+
+        <div style="display:inline-block; vertical-align:top;">
+            <form action="{{ path('validate_relay') }}">
+                <input type="hidden" name="relayId" id="TargetDisplay_Widget"/><br/>
+
+                <!-- La balise ayant pour Id "TargetDisplayInfoPR_Widget" a été paramétrée pour reçevoir l'adresse du Point Relais sélectionné -->
+                Point Relais Selectionné : <br/> <span id="TargetDisplayInfoPR_Widget"></span>
+                <br/>
+                <input type="submit" value="Valider le point relais"/>
+            </form>
+        </div>
+    </div>
+</div>
+{%  include('footer.html.twig') %}
+</body>
+</html>

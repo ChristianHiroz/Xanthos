@@ -37,7 +37,7 @@
                                             {% for size in product.sizes %}
                                                 {% for color in size.colors %}
                                                     {% set price = size.price + color.price %}
-                                                <option value="{{ size.id }}/{{ color.id }}">{{ size }} / {{ color }} +{{ price }}€</option>
+                                                <option value="{{ color.id }}">{{ size }} / {{ color }} + {{ price }}€</option>
                                                 {% endfor %}
                                             {% endfor %}
                                          </select>

@@ -1,0 +1,35 @@
+{% extends '::base.html.twig' %}
+
+{% block body %}
+    {{ parent() }}
+    <div class="single-product-area">
+        <div class="zigzag-bottom"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h2>Commande #{{ numquestion }}</h2>
+                    <p>Montant : {{ order_amount }} €</p>
+                    <form method="POST" action="https://preprod-ppps.paybox.com/PPPS.php">
+                        <input type="hidden" name="VERSION" value="00104">
+                        <input type="hidden" name="TYPE" value="00003">
+                        <input type="hidden" name="SITE" value="{{ site }}">
+                        <input type="hidden" name="RANG" value="{{ rang }}">
+                        <input type="hidden" name="NUMQUESTION" value="{{ numquestion }}">
+                        <input type="hidden" name="MONTANT" value="{{ order_amount }}">
+                        <input type="hidden" name="DEVISE" value="978">
+                        <input type="hidden" name="REFERENCE" value="{{ reference }}">
+                        <input type="hidden" name="PORTEUR" value="{{ card_number }}">
+                        <input type="hidden" name="HASH" value="SHA512">
+                        <input type="hidden" name="DATEVAL" value="1017">
+                        <input type="hidden" name="CVV" value="{{ card_cvv }}">
+                        <input type="hidden" name="ACTIVITE" value="024">
+                        <input type="hidden" name="DATEQ" value="{{ date }}">
+                        <input type="hidden" name="HMAC" value='{{ hmac }}'>
+                        <input type="submit" />
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+{% endblock %}
