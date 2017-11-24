@@ -1,20 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="107bef04-7b0d-46c5-b703-bb7e5cf9a072" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ECommerceBundle/Resources/views/ECommerce/chooseRelay.html.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ECommerceBundle/Resources/views/ECommerce/validate.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/config/parameters.yml" afterPath="$PROJECT_DIR$/app/config/parameters.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/CoreBundle/Controller/DefaultController.php" afterPath="$PROJECT_DIR$/src/CoreBundle/Controller/DefaultController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ECommerceBundle/Controller/ECommerceController.php" afterPath="$PROJECT_DIR$/src/ECommerceBundle/Controller/ECommerceController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ECommerceBundle/Entity/Cart.php" afterPath="$PROJECT_DIR$/src/ECommerceBundle/Entity/Cart.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ECommerceBundle/Entity/Order.php" afterPath="$PROJECT_DIR$/src/ECommerceBundle/Entity/Order.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ECommerceBundle/Resources/views/ECommerce/payOrder.html.twig" afterPath="$PROJECT_DIR$/src/ECommerceBundle/Resources/views/ECommerce/payOrder.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ECommerceBundle/Resources/views/ECommerce/showCart.html.twig" afterPath="$PROJECT_DIR$/src/ECommerceBundle/Resources/views/ECommerce/showCart.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ECommerceBundle/Resources/views/ECommerce/showProduct.html.twig" afterPath="$PROJECT_DIR$/src/ECommerceBundle/Resources/views/ECommerce/showProduct.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/UserBundle/Entity/User.php" afterPath="$PROJECT_DIR$/src/UserBundle/Entity/User.php" />
-    </list>
+    <list default="true" id="107bef04-7b0d-46c5-b703-bb7e5cf9a072" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -27,61 +14,31 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="ECommerceController.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="ECommerceController.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/ECommerceBundle/Controller/ECommerceController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="6732">
-              <caret line="385" column="37" lean-forward="false" selection-start-line="385" selection-start-column="37" selection-end-line="385" selection-end-column="37" />
+            <state relative-caret-position="323">
+              <caret line="273" column="43" lean-forward="false" selection-start-line="273" selection-start-column="43" selection-end-line="273" selection-end-column="43" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="chooseRelay.html.twig" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/ECommerceBundle/Resources/views/ECommerce/chooseRelay.html.twig">
+      <file leaf-file-name="payOrder.html.twig" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ECommerceBundle/Resources/views/ECommerce/payOrder.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="372">
-              <caret line="111" column="20" lean-forward="false" selection-start-line="111" selection-start-column="20" selection-end-line="111" selection-end-column="20" />
+            <state relative-caret-position="289">
+              <caret line="17" column="82" lean-forward="false" selection-start-line="17" selection-start-column="82" selection-end-line="17" selection-end-column="82" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="footer.html.twig" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Resources/views/footer.html.twig">
+      <file leaf-file-name="validate.html.twig" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ECommerceBundle/Resources/views/ECommerce/validate.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="base.html.twig" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Resources/views/base.html.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="738">
-              <caret line="41" column="0" lean-forward="false" selection-start-line="41" selection-start-column="0" selection-end-line="53" selection-end-column="61" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RegistrationController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/UserBundle/Controller/RegistrationController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="User.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/UserBundle/Entity/User.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="468">
-              <caret line="29" column="47" lean-forward="false" selection-start-line="29" selection-start-column="47" selection-end-line="29" selection-end-column="47" />
+            <state relative-caret-position="459">
+              <caret line="27" column="0" lean-forward="false" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -91,7 +48,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>e</find>
       <find>€</find>
       <find>addCart</find>
       <find>add</find>
@@ -108,10 +64,24 @@
       <find>redirec</find>
       <find>orders</find>
       <find>/orders</find>
+      <find>:rw</find>
+      <find>setWe</find>
+      <find>setWeight</find>
+      <find>span</find>
+      <find>show_cart</find>
+      <find>setDelivery</find>
+      <find>var_du</find>
+      <find>e</find>
+      <find>url</find>
+      <find>getPa</find>
     </findStrings>
+    <replaceStrings>
+      <replace />
+    </replaceStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$/src/ECommerceBundle</dir>
       <dir>$PROJECT_DIR$/src/ECommerceBundle/Controller</dir>
+      <dir>C:\Users\Prancing\Documents\GitHub\xanthos-deploy</dir>
     </dirStrings>
   </component>
   <component name="Git.Settings">
@@ -124,22 +94,31 @@
         <option value="$PROJECT_DIR$/src/CoreBundle/Admin/ProductAdmin.php" />
         <option value="$PROJECT_DIR$/web/app_dev.php" />
         <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/src/ECommerceBundle/Entity/Order.php" />
         <option value="$PROJECT_DIR$/src/ECommerceBundle/Resources/views/ECommerce/showProduct.html.twig" />
-        <option value="$PROJECT_DIR$/src/ECommerceBundle/Entity/Cart.php" />
-        <option value="$PROJECT_DIR$/src/ECommerceBundle/Resources/views/ECommerce/showCart.html.twig" />
         <option value="$PROJECT_DIR$/src/CoreBundle/Controller/DefaultController.php" />
         <option value="$PROJECT_DIR$/vendor/lexik/paybox-bundle/Paybox/System/Base/ParameterResolver.php" />
         <option value="$PROJECT_DIR$/vendor/lexik/paybox-bundle/Paybox/System/Base/Request.php" />
-        <option value="$PROJECT_DIR$/app/config/parameters.yml" />
-        <option value="$PROJECT_DIR$/src/ECommerceBundle/Resources/views/ECommerce/validate.html.twig" />
         <option value="$PROJECT_DIR$/vendor/lexik/paybox-bundle/Resources/views/Sample/index.html.twig" />
         <option value="$PROJECT_DIR$/vendor/lexik/paybox-bundle/Controller/SampleController.php" />
-        <option value="$PROJECT_DIR$/src/ECommerceBundle/Resources/views/ECommerce/payOrder.html.twig" />
         <option value="$PROJECT_DIR$/app/Resources/views/base.html.twig" />
-        <option value="$PROJECT_DIR$/src/ECommerceBundle/Controller/ECommerceController.php" />
+        <option value="$PROJECT_DIR$/../xanthos-deploy/docker-compose.yml" />
+        <option value="$PROJECT_DIR$/../xanthos-deploy/nginx/symfony.conf" />
+        <option value="$PROJECT_DIR$/../xanthos-deploy/.env" />
         <option value="$PROJECT_DIR$/src/UserBundle/Entity/User.php" />
+        <option value="$PROJECT_DIR$/../xanthos-deploy/php7-fpm/Dockerfile" />
+        <option value="$PROJECT_DIR$/src/UserBundle/Resources/views/Profile/show_content.html.twig" />
         <option value="$PROJECT_DIR$/src/ECommerceBundle/Resources/views/ECommerce/chooseRelay.html.twig" />
+        <option value="$PROJECT_DIR$/app/Resources/views/header.html.twig" />
+        <option value="$PROJECT_DIR$/src/ECommerceBundle/Entity/Cart.php" />
+        <option value="$PROJECT_DIR$/src/ECommerceBundle/Entity/Order.php" />
+        <option value="$PROJECT_DIR$/src/ECommerceBundle/Manager/DeliveryFeeManager.php" />
+        <option value="$PROJECT_DIR$/src/ECommerceBundle/Resources/views/ECommerce/showCart.html.twig" />
+        <option value="$PROJECT_DIR$/src/ECommerceBundle/Resources/views/ECommerce/showOrder.html.twig" />
+        <option value="$PROJECT_DIR$/src/ECommerceBundle/Resources/views/ECommerce/showOrders.html.twig" />
+        <option value="$PROJECT_DIR$/app/config/parameters.yml" />
+        <option value="$PROJECT_DIR$/src/ECommerceBundle/Resources/views/ECommerce/payOrder.html.twig" />
+        <option value="$PROJECT_DIR$/src/ECommerceBundle/Resources/views/ECommerce/validate.html.twig" />
+        <option value="$PROJECT_DIR$/src/ECommerceBundle/Controller/ECommerceController.php" />
       </list>
     </option>
   </component>
@@ -156,6 +135,7 @@
     <option name="width" value="1855" />
     <option name="height" value="1084" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator currentView="Scope" currentSubView="Project Files" proportions="" version="1">
       <flattenPackages />
@@ -181,10 +161,17 @@
             <path>
               <item name="Root" type="cbb8eebc:String" user="Root" />
               <item name="Xanthos" type="cbb8eebc:String" user="Xanthos" />
+              <item name="Xanthos" type="cbb8eebc:String" user="Xanthos" />
+            </path>
+            <path>
+              <item name="Root" type="cbb8eebc:String" user="Root" />
+              <item name="Xanthos" type="cbb8eebc:String" user="Xanthos" />
+              <item name="Xanthos" type="cbb8eebc:String" user="Xanthos" />
               <item name="app" type="cbb8eebc:String" user="app" />
             </path>
             <path>
               <item name="Root" type="cbb8eebc:String" user="Root" />
+              <item name="Xanthos" type="cbb8eebc:String" user="Xanthos" />
               <item name="Xanthos" type="cbb8eebc:String" user="Xanthos" />
               <item name="app" type="cbb8eebc:String" user="app" />
               <item name="config" type="cbb8eebc:String" user="config" />
@@ -192,44 +179,52 @@
             <path>
               <item name="Root" type="cbb8eebc:String" user="Root" />
               <item name="Xanthos" type="cbb8eebc:String" user="Xanthos" />
-              <item name="app" type="cbb8eebc:String" user="app" />
+              <item name="Xanthos" type="cbb8eebc:String" user="Xanthos" />
+              <item name="src" type="cbb8eebc:String" user="src" />
+            </path>
+            <path>
+              <item name="Root" type="cbb8eebc:String" user="Root" />
+              <item name="Xanthos" type="cbb8eebc:String" user="Xanthos" />
+              <item name="Xanthos" type="cbb8eebc:String" user="Xanthos" />
+              <item name="src" type="cbb8eebc:String" user="src" />
+              <item name="ECommerceBundle" type="cbb8eebc:String" user="ECommerceBundle" />
+            </path>
+            <path>
+              <item name="Root" type="cbb8eebc:String" user="Root" />
+              <item name="Xanthos" type="cbb8eebc:String" user="Xanthos" />
+              <item name="Xanthos" type="cbb8eebc:String" user="Xanthos" />
+              <item name="src" type="cbb8eebc:String" user="src" />
+              <item name="ECommerceBundle" type="cbb8eebc:String" user="ECommerceBundle" />
+              <item name="Controller" type="cbb8eebc:String" user="Controller" />
+            </path>
+            <path>
+              <item name="Root" type="cbb8eebc:String" user="Root" />
+              <item name="Xanthos" type="cbb8eebc:String" user="Xanthos" />
+              <item name="Xanthos" type="cbb8eebc:String" user="Xanthos" />
+              <item name="src" type="cbb8eebc:String" user="src" />
+              <item name="ECommerceBundle" type="cbb8eebc:String" user="ECommerceBundle" />
+              <item name="Entity" type="cbb8eebc:String" user="Entity" />
+            </path>
+            <path>
+              <item name="Root" type="cbb8eebc:String" user="Root" />
+              <item name="Xanthos" type="cbb8eebc:String" user="Xanthos" />
+              <item name="Xanthos" type="cbb8eebc:String" user="Xanthos" />
+              <item name="src" type="cbb8eebc:String" user="src" />
+              <item name="ECommerceBundle" type="cbb8eebc:String" user="ECommerceBundle" />
               <item name="Resources" type="cbb8eebc:String" user="Resources" />
             </path>
             <path>
               <item name="Root" type="cbb8eebc:String" user="Root" />
               <item name="Xanthos" type="cbb8eebc:String" user="Xanthos" />
-              <item name="app" type="cbb8eebc:String" user="app" />
+              <item name="Xanthos" type="cbb8eebc:String" user="Xanthos" />
+              <item name="src" type="cbb8eebc:String" user="src" />
+              <item name="ECommerceBundle" type="cbb8eebc:String" user="ECommerceBundle" />
               <item name="Resources" type="cbb8eebc:String" user="Resources" />
               <item name="views" type="cbb8eebc:String" user="views" />
             </path>
             <path>
               <item name="Root" type="cbb8eebc:String" user="Root" />
               <item name="Xanthos" type="cbb8eebc:String" user="Xanthos" />
-              <item name="src" type="cbb8eebc:String" user="src" />
-            </path>
-            <path>
-              <item name="Root" type="cbb8eebc:String" user="Root" />
-              <item name="Xanthos" type="cbb8eebc:String" user="Xanthos" />
-              <item name="src" type="cbb8eebc:String" user="src" />
-              <item name="ECommerceBundle" type="cbb8eebc:String" user="ECommerceBundle" />
-            </path>
-            <path>
-              <item name="Root" type="cbb8eebc:String" user="Root" />
-              <item name="Xanthos" type="cbb8eebc:String" user="Xanthos" />
-              <item name="src" type="cbb8eebc:String" user="src" />
-              <item name="ECommerceBundle" type="cbb8eebc:String" user="ECommerceBundle" />
-              <item name="Resources" type="cbb8eebc:String" user="Resources" />
-            </path>
-            <path>
-              <item name="Root" type="cbb8eebc:String" user="Root" />
-              <item name="Xanthos" type="cbb8eebc:String" user="Xanthos" />
-              <item name="src" type="cbb8eebc:String" user="src" />
-              <item name="ECommerceBundle" type="cbb8eebc:String" user="ECommerceBundle" />
-              <item name="Resources" type="cbb8eebc:String" user="Resources" />
-              <item name="views" type="cbb8eebc:String" user="views" />
-            </path>
-            <path>
-              <item name="Root" type="cbb8eebc:String" user="Root" />
               <item name="Xanthos" type="cbb8eebc:String" user="Xanthos" />
               <item name="src" type="cbb8eebc:String" user="src" />
               <item name="ECommerceBundle" type="cbb8eebc:String" user="ECommerceBundle" />
@@ -240,16 +235,19 @@
             <path>
               <item name="Root" type="cbb8eebc:String" user="Root" />
               <item name="Xanthos" type="cbb8eebc:String" user="Xanthos" />
+              <item name="Xanthos" type="cbb8eebc:String" user="Xanthos" />
               <item name="var" type="cbb8eebc:String" user="var" />
             </path>
             <path>
               <item name="Root" type="cbb8eebc:String" user="Root" />
+              <item name="Xanthos" type="cbb8eebc:String" user="Xanthos" />
               <item name="Xanthos" type="cbb8eebc:String" user="Xanthos" />
               <item name="var" type="cbb8eebc:String" user="var" />
               <item name="cache" type="cbb8eebc:String" user="cache" />
             </path>
             <path>
               <item name="Root" type="cbb8eebc:String" user="Root" />
+              <item name="Xanthos" type="cbb8eebc:String" user="Xanthos" />
               <item name="Xanthos" type="cbb8eebc:String" user="Xanthos" />
               <item name="var" type="cbb8eebc:String" user="var" />
               <item name="cache" type="cbb8eebc:String" user="cache" />
@@ -257,6 +255,7 @@
             </path>
             <path>
               <item name="Root" type="cbb8eebc:String" user="Root" />
+              <item name="Xanthos" type="cbb8eebc:String" user="Xanthos" />
               <item name="Xanthos" type="cbb8eebc:String" user="Xanthos" />
               <item name="var" type="cbb8eebc:String" user="var" />
               <item name="cache" type="cbb8eebc:String" user="cache" />
@@ -266,10 +265,62 @@
             <path>
               <item name="Root" type="cbb8eebc:String" user="Root" />
               <item name="Xanthos" type="cbb8eebc:String" user="Xanthos" />
-              <item name="var" type="cbb8eebc:String" user="var" />
-              <item name="cache" type="cbb8eebc:String" user="cache" />
-              <item name="prod" type="cbb8eebc:String" user="prod" />
-              <item name="twig" type="cbb8eebc:String" user="twig" />
+              <item name="Xanthos" type="cbb8eebc:String" user="Xanthos" />
+              <item name="vendor" type="cbb8eebc:String" user="vendor" />
+            </path>
+            <path>
+              <item name="Root" type="cbb8eebc:String" user="Root" />
+              <item name="Xanthos" type="cbb8eebc:String" user="Xanthos" />
+              <item name="Xanthos" type="cbb8eebc:String" user="Xanthos" />
+              <item name="vendor" type="cbb8eebc:String" user="vendor" />
+              <item name="lexik" type="cbb8eebc:String" user="lexik" />
+            </path>
+            <path>
+              <item name="Root" type="cbb8eebc:String" user="Root" />
+              <item name="Xanthos" type="cbb8eebc:String" user="Xanthos" />
+              <item name="Xanthos" type="cbb8eebc:String" user="Xanthos" />
+              <item name="vendor" type="cbb8eebc:String" user="vendor" />
+              <item name="lexik" type="cbb8eebc:String" user="lexik" />
+              <item name="paybox-bundle" type="cbb8eebc:String" user="paybox-bundle" />
+            </path>
+            <path>
+              <item name="Root" type="cbb8eebc:String" user="Root" />
+              <item name="Xanthos" type="cbb8eebc:String" user="Xanthos" />
+              <item name="Xanthos" type="cbb8eebc:String" user="Xanthos" />
+              <item name="vendor" type="cbb8eebc:String" user="vendor" />
+              <item name="lexik" type="cbb8eebc:String" user="lexik" />
+              <item name="paybox-bundle" type="cbb8eebc:String" user="paybox-bundle" />
+              <item name="Listener" type="cbb8eebc:String" user="Listener" />
+            </path>
+            <path>
+              <item name="Root" type="cbb8eebc:String" user="Root" />
+              <item name="Xanthos" type="cbb8eebc:String" user="Xanthos" />
+              <item name="Xanthos" type="cbb8eebc:String" user="Xanthos" />
+              <item name="vendor" type="cbb8eebc:String" user="vendor" />
+              <item name="lexik" type="cbb8eebc:String" user="lexik" />
+              <item name="paybox-bundle" type="cbb8eebc:String" user="paybox-bundle" />
+              <item name="Paybox" type="cbb8eebc:String" user="Paybox" />
+            </path>
+            <path>
+              <item name="Root" type="cbb8eebc:String" user="Root" />
+              <item name="Xanthos" type="cbb8eebc:String" user="Xanthos" />
+              <item name="Xanthos" type="cbb8eebc:String" user="Xanthos" />
+              <item name="vendor" type="cbb8eebc:String" user="vendor" />
+              <item name="lexik" type="cbb8eebc:String" user="lexik" />
+              <item name="paybox-bundle" type="cbb8eebc:String" user="paybox-bundle" />
+              <item name="Paybox" type="cbb8eebc:String" user="Paybox" />
+              <item name="System" type="cbb8eebc:String" user="System" />
+            </path>
+            <path>
+              <item name="Root" type="cbb8eebc:String" user="Root" />
+              <item name="Xanthos" type="cbb8eebc:String" user="Xanthos" />
+              <item name="Xanthos" type="cbb8eebc:String" user="Xanthos" />
+              <item name="vendor" type="cbb8eebc:String" user="vendor" />
+              <item name="lexik" type="cbb8eebc:String" user="lexik" />
+              <item name="paybox-bundle" type="cbb8eebc:String" user="paybox-bundle" />
+              <item name="Paybox" type="cbb8eebc:String" user="Paybox" />
+              <item name="System" type="cbb8eebc:String" user="System" />
+              <item name="Base" type="cbb8eebc:String" user="Base" />
             </path>
           </expand>
           <select />
@@ -295,6 +346,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Prancing\Documents\GitHub\xanthos-deploy" />
       <recent name="$PROJECT_DIR$/src/ECommerceBundle/Resources/views/ECommerce" />
     </key>
   </component>
@@ -383,34 +435,55 @@
       <workItem from="1506887355230" duration="2470000" />
       <workItem from="1511087194641" duration="5059000" />
       <workItem from="1511170735698" duration="173000" />
+      <workItem from="1511533873600" duration="959000" />
+      <workItem from="1511542677046" duration="11234000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="20567000" />
+    <option name="totallyTimeSpent" value="32760000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="827" y="107" width="1857" height="1092" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1096" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24959569" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24947916" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32960325" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
+    <layout-to-restore>
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32960325" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24947916" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -425,128 +498,10 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/ECommerceBundle/Resources/views/ECommerce/validate.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="11" column="90" lean-forward="true" selection-start-line="11" selection-start-column="90" selection-end-line="11" selection-end-column="90" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ECommerceBundle/Controller/ECommerceController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/lexik/paybox-bundle/Paybox/System/Base/Request.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="21" column="11" lean-forward="false" selection-start-line="21" selection-start-column="11" selection-end-line="21" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/lexik/paybox-bundle/Paybox/System/Base/ParameterResolver.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2466">
-          <caret line="137" column="36" lean-forward="false" selection-start-line="137" selection-start-column="36" selection-end-line="137" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ECommerceBundle/Resources/views/ECommerce/payOrder.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="13" column="60" lean-forward="false" selection-start-line="13" selection-start-column="60" selection-end-line="13" selection-end-column="60" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/CoreBundle/Controller/DefaultController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="30" column="33" lean-forward="false" selection-start-line="30" selection-start-column="33" selection-end-line="30" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/parameters.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="9" column="21" lean-forward="false" selection-start-line="9" selection-start-column="21" selection-end-line="9" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/config.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1854">
-          <caret line="103" column="0" lean-forward="false" selection-start-line="103" selection-start-column="0" selection-end-line="105" selection-end-column="40" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/UserBundle/Controller/RegistrationController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ECommerceBundle/Resources/views/ECommerce/showCart.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="630">
-          <caret line="35" column="150" lean-forward="false" selection-start-line="35" selection-start-column="150" selection-end-line="35" selection-end-column="150" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ECommerceBundle/Resources/views/ECommerce/showProduct.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="702">
-          <caret line="39" column="106" lean-forward="false" selection-start-line="39" selection-start-column="106" selection-end-line="39" selection-end-column="106" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ECommerceBundle/Controller/ECommerceController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ECommerceBundle/Resources/views/ECommerce/showCart.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="630">
-          <caret line="35" column="150" lean-forward="false" selection-start-line="35" selection-start-column="150" selection-end-line="35" selection-end-column="150" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ECommerceBundle/Resources/views/ECommerce/showProduct.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="702">
-          <caret line="39" column="106" lean-forward="false" selection-start-line="39" selection-start-column="106" selection-end-line="39" selection-end-column="106" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ECommerceBundle/Entity/Cart.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3222">
-          <caret line="180" column="0" lean-forward="false" selection-start-line="180" selection-start-column="0" selection-end-line="180" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Resources/views/header.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1044">
-          <caret line="58" column="47" lean-forward="false" selection-start-line="58" selection-start-column="43" selection-end-line="58" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/config/parameters.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="18">
           <caret line="1" column="11" lean-forward="false" selection-start-line="1" selection-start-column="11" selection-end-line="1" selection-end-column="11" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -621,27 +576,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ECommerceBundle/Entity/Order.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1440">
-          <caret line="82" column="26" lean-forward="false" selection-start-line="82" selection-start-column="26" selection-end-line="82" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Resources/views/header.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1044">
-          <caret line="58" column="47" lean-forward="false" selection-start-line="58" selection-start-column="43" selection-end-line="58" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ECommerceBundle/Entity/Cart.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3222">
-          <caret line="180" column="0" lean-forward="false" selection-start-line="180" selection-start-column="0" selection-end-line="180" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/ECommerceBundle/Resources/views/ECommerce/showProduct.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="702">
@@ -649,41 +583,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ECommerceBundle/Resources/views/ECommerce/showCart.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="630">
-          <caret line="35" column="150" lean-forward="false" selection-start-line="35" selection-start-column="150" selection-end-line="35" selection-end-column="150" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/lexik/paybox-bundle/Paybox/System/Base/ParameterResolver.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2466">
-          <caret line="137" column="36" lean-forward="false" selection-start-line="137" selection-start-column="36" selection-end-line="137" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/lexik/paybox-bundle/Paybox/System/Base/Response.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2404">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/lexik/paybox-bundle/Paybox/DirectPlus/Request.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2148">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/lexik/paybox-bundle/Paybox/System/Base/Request.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2368">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/lexik/paybox-bundle/Paybox/System/Base/ParameterResolver.php" />
+    <entry file="file://$PROJECT_DIR$/vendor/lexik/paybox-bundle/Paybox/DirectPlus/Request.php" />
+    <entry file="file://$PROJECT_DIR$/vendor/lexik/paybox-bundle/Paybox/System/Base/Request.php" />
     <entry file="file://$PROJECT_DIR$/src/CoreBundle/Controller/DefaultController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="432">
@@ -691,57 +593,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/config.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="746">
-          <caret line="103" column="0" lean-forward="false" selection-start-line="103" selection-start-column="0" selection-end-line="105" selection-end-column="40" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/parameters.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/lexik/paybox-bundle/Resources/config/routing_sample.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/lexik/paybox-bundle/Controller/SampleController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="33" column="36" lean-forward="false" selection-start-line="33" selection-start-column="36" selection-end-line="33" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/lexik/paybox-bundle/Resources/views/Sample/index.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="9" column="65" lean-forward="false" selection-start-line="9" selection-start-column="55" selection-end-line="9" selection-end-column="65" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ECommerceBundle/Resources/views/ECommerce/payOrder.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="13" column="48" lean-forward="false" selection-start-line="13" selection-start-column="48" selection-end-line="13" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ECommerceBundle/Resources/views/ECommerce/validate.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="15" column="62" lean-forward="false" selection-start-line="15" selection-start-column="57" selection-end-line="15" selection-end-column="62" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/lexik/paybox-bundle/Resources/config/routing_sample.yml" />
+    <entry file="file://$PROJECT_DIR$/vendor/lexik/paybox-bundle/Controller/SampleController.php" />
+    <entry file="file://$PROJECT_DIR$/vendor/lexik/paybox-bundle/Resources/views/Sample/index.html.twig" />
     <entry file="file://$PROJECT_DIR$/composer.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -765,34 +619,240 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ECommerceBundle/Controller/ECommerceController.php">
+    <entry file="file://$PROJECT_DIR$/app/Resources/views/base.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6732">
-          <caret line="385" column="37" lean-forward="false" selection-start-line="385" selection-start-column="37" selection-end-line="385" selection-end-column="37" />
+        <state relative-caret-position="697">
+          <caret line="41" column="0" lean-forward="false" selection-start-line="41" selection-start-column="0" selection-end-line="53" selection-end-column="61" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../xanthos-deploy/.env.dist">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../xanthos-deploy/nginx/nginx.conf">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../xanthos-deploy/nginx/symfony.conf">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="29" lean-forward="false" selection-start-line="1" selection-start-column="29" selection-end-line="1" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../xanthos-deploy/.env">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="22" lean-forward="false" selection-start-line="5" selection-start-column="22" selection-end-line="5" selection-end-column="22" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/UserBundle/Entity/User.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="468">
-          <caret line="29" column="47" lean-forward="false" selection-start-line="29" selection-start-column="47" selection-end-line="29" selection-end-column="47" />
+        <state relative-caret-position="153">
+          <caret line="90" column="20" lean-forward="false" selection-start-line="90" selection-start-column="20" selection-end-line="90" selection-end-column="20" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Resources/views/base.html.twig">
+    <entry file="file://$PROJECT_DIR$/../xanthos-deploy/docker-compose.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="738">
-          <caret line="41" column="0" lean-forward="false" selection-start-line="41" selection-start-column="0" selection-end-line="53" selection-end-column="61" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/UserBundle/Resources/views/Profile/show.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/UserBundle/Resources/views/Profile/show_content.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="101" lean-forward="false" selection-start-line="8" selection-start-column="101" selection-end-line="8" selection-end-column="101" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ECommerceBundle/Resources/views/ECommerce/chooseRelay.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="372">
-          <caret line="111" column="20" lean-forward="false" selection-start-line="111" selection-start-column="20" selection-end-line="111" selection-end-column="20" />
+        <state relative-caret-position="394">
+          <caret line="63" column="50" lean-forward="false" selection-start-line="63" selection-start-column="50" selection-end-line="63" selection-end-column="50" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#input#1;n#form#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Resources/views/header.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="421">
+          <caret line="58" column="267" lean-forward="false" selection-start-line="58" selection-start-column="267" selection-end-line="58" selection-end-column="267" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../xanthos-deploy/php7-fpm/Dockerfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="629">
+          <caret line="37" column="29" lean-forward="false" selection-start-line="37" selection-start-column="29" selection-end-line="37" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ECommerceBundle/Manager/DeliveryFeeManager.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="527">
+          <caret line="31" column="1" lean-forward="false" selection-start-line="31" selection-start-column="1" selection-end-line="31" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ECommerceBundle/Entity/Order.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="65" column="24" lean-forward="false" selection-start-line="65" selection-start-column="24" selection-end-line="65" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ECommerceBundle/Entity/Cart.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ECommerceBundle/Resources/views/ECommerce/showOrder.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="85" lean-forward="false" selection-start-line="9" selection-start-column="85" selection-end-line="9" selection-end-column="85" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ECommerceBundle/Resources/views/ECommerce/showOrders.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="646">
+          <caret line="38" column="57" lean-forward="false" selection-start-line="38" selection-start-column="52" selection-end-line="38" selection-end-column="57" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ECommerceBundle/Resources/views/ECommerce/showCart.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="646">
+          <caret line="80" column="85" lean-forward="false" selection-start-line="80" selection-start-column="85" selection-end-line="80" selection-end-column="85" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/lexik/paybox-bundle/Paybox/System/Base/Response.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2210">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/lexik/paybox-bundle/Paybox/AbstractRequest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-510">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/lexik/paybox-bundle/Event/PayboxResponseEvent.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="11" column="6" lean-forward="false" selection-start-line="11" selection-start-column="6" selection-end-line="11" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/config/config.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="697">
+          <caret line="99" column="146" lean-forward="false" selection-start-line="99" selection-start-column="18" selection-end-line="99" selection-end-column="146" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/config/parameters.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="34" lean-forward="false" selection-start-line="15" selection-start-column="34" selection-end-line="15" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/config/parameters.yml.dist">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/lexik/paybox-bundle/Listener/SampleIpnListener.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="561">
+          <caret line="41" column="45" lean-forward="false" selection-start-line="41" selection-start-column="45" selection-end-line="41" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/stubs/standard/standard_1.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="319">
+          <caret line="766" column="9" lean-forward="false" selection-start-line="766" selection-start-column="9" selection-end-line="766" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ECommerceBundle/Resources/views/ECommerce/payOrder.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="82" lean-forward="false" selection-start-line="17" selection-start-column="82" selection-end-line="17" selection-end-column="82" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ECommerceBundle/Resources/views/ECommerce/validate.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="27" column="0" lean-forward="false" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ECommerceBundle/Controller/ECommerceController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="273" column="43" lean-forward="false" selection-start-line="273" selection-start-column="43" selection-end-line="273" selection-end-column="43" />
           <folding />
         </state>
       </provider>

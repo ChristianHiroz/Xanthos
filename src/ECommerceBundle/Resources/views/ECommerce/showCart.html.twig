@@ -68,12 +68,17 @@
 
                                         <tr class="shipping">
                                             <th>Frais de ports</th>
+                                            {% if cart.deliveryFee == 0 %}
                                             <td>Frais de ports gratuits</td>
+                                            {% else %}
+                                            <td>{{ cart.deliveryFee }}</td>
+                                            {% endif %}
                                         </tr>
 
                                         <tr class="order-total">
                                             <th>Panier total</th>
-                                            <td><strong><span class="amount">{{ amount }} €</span></strong> </td>
+                                            {% set total = cart.deliveryFee + amount %}
+                                            <td><strong><span class="amount">{{ total }} €</span></strong> </td>
                                         </tr>
 
                                         <tr>

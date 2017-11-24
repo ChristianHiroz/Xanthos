@@ -32,6 +32,13 @@ class Cart
     /**
      * @var float
      *
+     * @ORM\Column(name="deliveryFee", type="float")
+     */
+    private $deliveryFee;
+
+    /**
+     * @var float
+     *
      * @ORM\Column(name="weight", type="float")
      */
     private $weight;
@@ -177,6 +184,25 @@ class Cart
     public function setPrice($price)
     {
         $this->price = $price;
+    }
+
+    /**
+     * @return float
+     */
+    public function getDeliveryFee()
+    {
+        return $this->deliveryFee;
+    }
+
+    /**
+     * @param float $deliveryFee
+     * @return Cart
+     */
+    public function setDeliveryFee($deliveryFee)
+    {
+        $this->deliveryFee = $deliveryFee;
+
+        return $this;
     }
 }
 

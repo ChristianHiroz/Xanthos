@@ -56,7 +56,7 @@
             <div class="col-sm-6">
                 {% if is_granted('ROLE_USER') %}
                 <div class="shopping-item">
-                    <a href="{{ path('show_cart') }}">Panier - <span class="cart-amunt">{{ amount }} €</span> <i class="fa fa-shopping-cart"></i> <span class="product-count">{{ productCount }}</span></a>
+                    <a href="{{ path('show_cart') }}">Panier - <span class="cart-amunt">{{ amount }} €</span> <i class="fa fa-shopping-cart"></i>{% if productCount %} {% if productCount > 0 %} <span class="product-count">{{ productCount }}</span> {% endif %} {% endif %}</a>
                 </div>
                 {% else %}
                 <div class="shopping-item" style="margin-left:20px; background-color:#1abc9c;">

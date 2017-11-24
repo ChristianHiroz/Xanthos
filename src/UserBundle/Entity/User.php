@@ -32,6 +32,13 @@ class User extends BaseUser
     private $relayId;
 
     /**
+     * @var int
+     *
+     * @ORM\Column(name="address", type="string", nullable=true)
+     */
+    private $address;
+
+    /**
      * @var Cart
      *
      * @ORM\OneToOne(targetEntity="\ECommerceBundle\Entity\Cart", cascade={"persist"})
@@ -68,6 +75,25 @@ class User extends BaseUser
     public function setRelayId($relayId)
     {
         $this->relayId = $relayId;
+
+        return $this;
+    }
+
+    /**
+     * @return int
+     */
+    public function getAddress()
+    {
+        return $this->address;
+    }
+
+    /**
+     * @param int $address
+     * @return $this
+     */
+    public function setAddress($address)
+    {
+        $this->address = $address;
 
         return $this;
     }

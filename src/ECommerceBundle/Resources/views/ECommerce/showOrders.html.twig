@@ -15,6 +15,7 @@
                                     <tr>
                                         <th class="product-name">Numéro</th>
                                         <th class="product-price">Prix</th>
+                                        <th class="product-price">Frais de ports</th>
                                         <th class="product-price">Status</th>
                                     </tr>
                                     </thead>
@@ -28,13 +29,17 @@
                                         <td class="product-price">
                                             <span class="amount">{{ order.price }} €</span>
                                         </td>
+
+                                        <td class="product-price">
+                                            <span class="amount">{{ order.deliveryFee }} €</span>
+                                        </td>
                                         <td class="product-price">
                                             <span class="amount">
                                                 {% if order.status == true %}
                                                     Payée
                                                 {% else %}
                                                     {#Paiement bientôt disponible !#}
-                                                    <a href="{{ path('pay_order', {'id' : order.id}) }}"> Paiement en cours</a>
+                                                    <a href="{{ path('pay_order', {'id' : order.id}) }}"> Paiement en attente</a>
                                                 {% endif %}
                                             </span>
                                         </td>

@@ -8,6 +8,7 @@ use ECommerceBundle\Entity\Category;
 use ECommerceBundle\Entity\Color;
 use ECommerceBundle\Entity\Order;
 use ECommerceBundle\Entity\Product;
+use ECommerceBundle\Manager\DeliveryFeeManager;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
@@ -90,6 +91,12 @@ class ECommerceController extends Controller
         $cart->addProduct($product);
         $cart->addColor($color);
         $cart->setPrice($cart->getPrice() + $price);
+        $cart->setWeight($cart->getWeight() + $product->getWeight());
+        if($user->getRelayId() === "free"){
+            $cart->setDeliveryFee(0);
+        }else{
+            $cart->setDeliveryFee(DeliveryFeeManager::getDeliveryPrice($cart->getWeight()));
+        }
 
         $em->persist($cart);
         $em->flush();
@@ -125,6 +132,12 @@ class ECommerceController extends Controller
         $cart->removeProduct($product);
         $cart->getColors()->removeElement($color);
         $cart->setPrice($cart->getPrice() - $price);
+        $cart->setWeight($cart->getWeight() - $product->getWeight());
+        if($user->getRelayId() === "free"){
+            $cart->setDeliveryFee(0);
+        }else{
+            $cart->setDeliveryFee(DeliveryFeeManager::getDeliveryPrice($cart->getWeight()));
+        }
         $em->persist($cart);
         $em->flush();
 
@@ -245,7 +258,6 @@ class ECommerceController extends Controller
         /** @var Order $order */
         $order = $this->getDoctrine()->getRepository(Order::class)->find($id);
         $date = new \DateTime();
-
         $msg ="VERSION=00104".
             "&TYPE=00003".
             "&SITE=".$this->getParameter('site').
@@ -256,10 +268,10 @@ class ECommerceController extends Controller
             "&REFERENCE=XANTHOS".$order->getId().
             "&PORTEUR=".$request->get('card_number').
             "&HASH=SHA512".
-            "&DATEVAL=1017".
+            "&DATEVAL=".str_replace("/", "", $request->get('validity_date')).
             "&CVV=".$request->get('card_cvv').
             "&ACTIVITE=024".
-            "&DATEQ="."01092017";
+            "&DATEQ=".$date->format('dmY');
 //
 //        $myvars =
 //            'PBX_SITE=' . $this->getParameter('site') .
@@ -294,11 +306,11 @@ class ECommerceController extends Controller
                 'reference' => "XANTHOS".$order->getId(),
                 'card_number' => $request->get('card_number'),
                 'card_cvv' => $request->get('card_cvv'),
-                'date' => "01092017",
+                'date' => $date->format('dmY'),
                 'site'  => $this->getParameter('site'),
                 'rang'  => $this->getParameter('rank'),
+                'date_val' => str_replace("/", "", $request->get('validity_date')),
                 'hmac' => $hmac,
-                'url' => $this->getParameter('url'),
                 'productCount' => $productCount
             )
         );
@@ -312,7 +324,7 @@ class ECommerceController extends Controller
      */
     public function paymentReturnAction($status)
     {
-        var_dump($status);exit;
+
     }
 
 
@@ -337,6 +349,7 @@ class ECommerceController extends Controller
         $order = new Order();
         $order->setProducts($cart->getProducts());
         $order->setPrice($cart->getPrice());
+        $order->setDeliveryFee($cart->getDeliveryFee());
         $order->setUser($user);
         $user->addOrder($order);
 
@@ -385,6 +398,12 @@ class ECommerceController extends Controller
 
         if($request->get('relayId')){
             $user->setRelayId($request->get('relayId'));
+            if($request->get('relayId') === 'free'){
+                $user->setAddress($request->get('address_free'));
+            }else {
+                $user->setAddress($request->get('address'));
+            }
+
             $this->getDoctrine()->getManager()->persist($user);
             $this->getDoctrine()->getManager()->flush($user);
         }else {

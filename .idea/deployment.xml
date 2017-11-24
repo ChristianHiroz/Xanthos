@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="PublishConfigData" serverName="FoodMeUp">
+  <component name="PublishConfigData" serverName="vbdfgdf">
     <serverData>
-      <paths name="FoodMeUp">
+      <paths name="vbdfgdf">
         <serverdata>
           <mappings>
-            <mapping local="$PROJECT_DIR$" web="Xanthos" />
+            <mapping local="$PROJECT_DIR$" web="/" />
           </mappings>
         </serverdata>
       </paths>

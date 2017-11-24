@@ -3,7 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/Xanthos.iml" filepath="$PROJECT_DIR$/.idea/Xanthos.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/Xanthos.iml" filepath="$PROJECT_DIR$/.idea/Xanthos.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../xanthos-deploy/.idea/xanthos.iml" filepath="$PROJECT_DIR$/../xanthos-deploy/.idea/xanthos.iml" />
     </modules>
   </component>
 </project>

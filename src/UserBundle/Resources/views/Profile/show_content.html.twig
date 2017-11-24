@@ -5,6 +5,11 @@
         <div class="col-md-12" style="text-align: center; height:230px;">
             <p>{{ 'profile.show.username'|trans }}: {{ user.username }}</p>
             <p>{{ 'profile.show.email'|trans }}: {{ user.email }}</p>
+            {% if user.address %}
+            <p>Adresse de livraison: {{ user.address }} <a href="{{ path('choose_relay') }}">Modifier</a></p><br/>
+            {% else %}
+                <p>Adresse : <a href="{{ path('choose_relay') }}">Définir</a></p><br/>
+            {% endif %}
             <br/>
             <a class="shopping-item" style="float:none; width:10%;" href="{{ path('fos_user_profile_edit') }}">Modifier</a>
         </div>
