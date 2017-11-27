@@ -34,15 +34,23 @@
                                     {% if is_granted('ROLE_USER') %}
                                     <form action="{{ path('add_to_cart', {'productId' : product.id}) }}">
                                          <select name="picker" class="add_to_cart_button">
+                                            {% set empty = true %}
                                             {% for size in product.sizes %}
                                                 {% for color in size.colors %}
-                                                    {% set price = size.price + color.price %}
-                                                <option value="{{ color.id }}">{{ size }} / {{ color }} + {{ price }}€</option>
+                                                    {% if color.stock > 0 %}
+                                                        {% set price = size.price + color.price %}
+                                                        {% set empty = false %}
+                                                        <option value="{{ color.id }}">{{ size }} / {{ color }} + {{ price }}€</option>
+                                                    {% endif %}
                                                 {% endfor %}
                                             {% endfor %}
                                          </select>
                                         <br/> <br/>
-                                        <input value="Ajouter au panier" type="submit" id="addCart" class="add_to_cart_button" href="{{ path('add_to_cart', {'productId' : product.id}) }}">
+                                        {% if empty %}
+                                            <input value="Stock épuisé" type="submit" disabled>
+                                        {% else %}
+                                            <input value="Ajouter au panier" type="submit" id="addCart" class="add_to_cart_button" href="{{ path('add_to_cart', {'productId' : product.id}) }}">
+                                        {% endif %}
                                     </form>
                                     {% else %}
                                         <a class="add_to_cart_button" href="{{ path('fos_user_security_login') }}">Se connecter</a>

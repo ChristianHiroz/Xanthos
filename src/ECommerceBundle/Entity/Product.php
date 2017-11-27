@@ -58,13 +58,6 @@ class Product
      */
     private $weight;
 
-    /**
-     * @var float
-     *
-     * @ORM\Column(name="stock", type="float")
-     */
-    private $stock;
-
 
     /**
      * @var Category
@@ -189,25 +182,6 @@ class Product
     public function getPrice()
     {
         return $this->price;
-    }
-
-    /**
-     * @return float
-     */
-    public function getStock()
-    {
-        return $this->stock;
-    }
-
-    /**
-     * @param float $stock
-     * @return $this
-     */
-    public function setStock($stock)
-    {
-        $this->stock = $stock;
-
-        return $this;
     }
 
     /**

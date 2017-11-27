@@ -12,6 +12,7 @@ class ColorAdmin extends AbstractAdmin
     {
         $formMapper->add('name', 'text', array('label' => 'Nom'));
         $formMapper->add('price', 'number', array('label' => 'Prix'));
+        $formMapper->add('stock', 'number', array('label' => 'Quantité en stock'));
         $formMapper->add('promotion', 'sonata_type_model', array('label' => 'Promotion', 'by_reference' => false, 'required' => false));
 
     }
