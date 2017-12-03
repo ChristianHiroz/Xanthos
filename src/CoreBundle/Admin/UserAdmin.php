@@ -29,6 +29,7 @@ class UserAdmin extends AbstractAdmin
         $listMapper->addIdentifier('username', null, array('label' => 'Nom'));
         $listMapper->addIdentifier('email', null, array('label' => 'Email'));
         $listMapper->addIdentifier('lastLogin', null, array('label' => 'Dernière connexion'));
+        $listMapper->addIdentifier('address', null, array('label' => 'Adresse'));
     }
 
     protected function configureRoutes(RouteCollection $collection)

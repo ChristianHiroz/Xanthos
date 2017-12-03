@@ -27,6 +27,6 @@ class DeliveryFeeManager
             return 19.10;
         }
 
-        return "error";
+        return 0;
     }
 }
