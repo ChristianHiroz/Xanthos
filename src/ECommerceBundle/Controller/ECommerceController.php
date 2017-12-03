@@ -257,13 +257,20 @@ class ECommerceController extends Controller
     {
         /** @var Order $order */
         $order = $this->getDoctrine()->getRepository(Order::class)->find($id);
+        $price = $order->getPrice();
+        $price = $price * 100;
+        $price = strval($price);
+
+        $finalPrice = "0000000000";
+        $finalPrice = substr_replace($finalPrice, $price, strlen($price - 1));
+
         $date = new \DateTime();
         $msg ="VERSION=00104".
             "&TYPE=00003".
             "&SITE=".$this->getParameter('site').
             "&RANG=".$this->getParameter('rank').
             "&NUMQUESTION=".$order->getId().
-            "&MONTANT=".$order->getPrice().
+            "&MONTANT=".$finalPrice.
             "&DEVISE=978".
             "&REFERENCE=XANTHOS".$order->getId().
             "&PORTEUR=".$request->get('card_number').
@@ -302,7 +309,7 @@ class ECommerceController extends Controller
                 'categorys' => $this->getDoctrine()->getManager()->getRepository(Category::class)->findBy(array('mainCategory' => true)),
                 'numquestion' => $order->getId(),
                 'amount' => $amount,
-                'order_amount' => $order->getPrice(),
+                'order_amount' => $finalPrice,
                 'reference' => "XANTHOS".$order->getId(),
                 'card_number' => $request->get('card_number'),
                 'card_cvv' => $request->get('card_cvv'),
