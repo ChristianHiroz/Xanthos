@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="107bef04-7b0d-46c5-b703-bb7e5cf9a072" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/CoreBundle/Admin/UserAdmin.php" afterPath="$PROJECT_DIR$/src/CoreBundle/Admin/UserAdmin.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ECommerceBundle/Manager/DeliveryFeeManager.php" afterPath="$PROJECT_DIR$/src/ECommerceBundle/Manager/DeliveryFeeManager.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -32,8 +31,8 @@
       <file leaf-file-name="UserAdmin.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/CoreBundle/Admin/UserAdmin.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="486">
-              <caret line="31" column="77" lean-forward="false" selection-start-line="31" selection-start-column="77" selection-end-line="31" selection-end-column="77" />
+            <state relative-caret-position="504">
+              <caret line="32" column="82" lean-forward="false" selection-start-line="32" selection-start-column="82" selection-end-line="32" selection-end-column="82" />
               <folding />
             </state>
           </provider>
@@ -411,12 +410,12 @@
       <workItem from="1511170735698" duration="173000" />
       <workItem from="1511533873600" duration="959000" />
       <workItem from="1511542677046" duration="11234000" />
-      <workItem from="1512313993643" duration="3094000" />
+      <workItem from="1512313993643" duration="3190000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="37727000" />
+    <option name="totallyTimeSpent" value="37823000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="827" y="107" width="1855" height="1084" extended-state="6" />
@@ -809,8 +808,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/CoreBundle/Admin/UserAdmin.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="486">
-          <caret line="31" column="77" lean-forward="false" selection-start-line="31" selection-start-column="77" selection-end-line="31" selection-end-column="77" />
+        <state relative-caret-position="504">
+          <caret line="32" column="82" lean-forward="false" selection-start-line="32" selection-start-column="82" selection-end-line="32" selection-end-column="82" />
           <folding />
         </state>
       </provider>
