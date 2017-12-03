@@ -317,15 +317,36 @@ class ECommerceController extends Controller
     }
 
     /**
-     * @Route("/paymentReturn/{status}", name="payment_return")
+     * @Route("/paymentReturn", name="payment_return")
      * @Template()
-     * @param $status
-     * @return \Symfony\Component\HttpFoundation\Response
      */
-    public function paymentReturnAction($status)
+    public function paymentReturnAction(Request $request)
     {
+        if($request->getMethod() === "POST") {
+            /** @var Order $order */
+            $order = $this->getDoctrine()->getRepository(Order::class)->find($request->get('NUMQUESTION'));
+            if($order) {
+                $status = $request->get('CODERESPONSE');
+                if($status === "00000") {
+                    $order->setStatus(true);
+                    $paymentResult = true;
+                }else {
+                    $paymentResult = false;
+                }
+            }
 
+            /** @var User $user */
+            $user = $this->getUser();
+            $cart = $user->getCart();
+            $amount = $cart->getPrice();
+            $productCount = $cart->getProducts()->count();
+
+            return array('order' => $order, 'status' => $paymentResult, 'code' => $status, 'user' => $user, 'amount' => $amount, 'productCount' => $productCount, 'categorys' => $this->getDoctrine()->getManager()->getRepository(Category::class)->findBy(array('mainCategory' => true)));
+        }
+
+        return $this->redirect($this->generateUrl('index'));
     }
+
 
 
 
