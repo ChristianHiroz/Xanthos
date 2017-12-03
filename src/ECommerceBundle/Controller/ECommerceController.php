@@ -93,7 +93,7 @@ class ECommerceController extends Controller
         $cart->setPrice($cart->getPrice() + $price);
         $cart->setWeight($cart->getWeight() + $product->getWeight());
         if($user->getRelayId() === "free"){
-            $cart->setDeliveryFee(0);
+            $cart->setDeliveryFee(0.0);
         }else{
             $cart->setDeliveryFee(DeliveryFeeManager::getDeliveryPrice($cart->getWeight()));
         }

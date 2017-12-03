@@ -63,6 +63,7 @@ class Cart
         $this->colors = new ArrayCollection();
         $this->weight = 0;
         $this->price = 0;
+        $this->deliveryFee = 0;
     }
 
     /**

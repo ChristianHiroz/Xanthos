@@ -5,8 +5,8 @@ class DeliveryFeeManager
 {
     public static function getDeliveryPrice($weight)
     {
-        if($weight === 0) {
-            return 0;
+        if($weight == 0) {
+            return 0.0;
         }elseif ($weight <= 500) {
             return 4.55;
         }elseif ($weight <= 1000) {
@@ -27,6 +27,6 @@ class DeliveryFeeManager
             return 19.10;
         }
 
-        return 0;
+        return 0.0;
     }
 }

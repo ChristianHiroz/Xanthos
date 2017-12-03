@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="107bef04-7b0d-46c5-b703-bb7e5cf9a072" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/CoreBundle/Admin/UserAdmin.php" afterPath="$PROJECT_DIR$/src/CoreBundle/Admin/UserAdmin.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ECommerceBundle/Controller/ECommerceController.php" afterPath="$PROJECT_DIR$/src/ECommerceBundle/Controller/ECommerceController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ECommerceBundle/Entity/Cart.php" afterPath="$PROJECT_DIR$/src/ECommerceBundle/Entity/Cart.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ECommerceBundle/Manager/DeliveryFeeManager.php" afterPath="$PROJECT_DIR$/src/ECommerceBundle/Manager/DeliveryFeeManager.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -22,13 +24,13 @@
             <state relative-caret-position="600">
               <caret line="94" column="43" lean-forward="true" selection-start-line="94" selection-start-column="43" selection-end-line="94" selection-end-column="43" />
               <folding>
-                <marker date="1512321128633" expanded="true" signature="14956:15091" ph="..." />
+                <marker date="1512322014515" expanded="true" signature="14958:15093" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UserAdmin.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="UserAdmin.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/CoreBundle/Admin/UserAdmin.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="504">
@@ -38,11 +40,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Cart.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Cart.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/ECommerceBundle/Entity/Cart.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="699">
-              <caret line="200" column="20" lean-forward="false" selection-start-line="200" selection-start-column="20" selection-end-line="200" selection-end-column="20" />
+              <caret line="65" column="31" lean-forward="false" selection-start-line="65" selection-start-column="31" selection-end-line="65" selection-end-column="31" />
               <folding />
             </state>
           </provider>
@@ -51,8 +53,8 @@
       <file leaf-file-name="DeliveryFeeManager.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ECommerceBundle/Manager/DeliveryFeeManager.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="522">
-              <caret line="29" column="16" lean-forward="false" selection-start-line="29" selection-start-column="16" selection-end-line="29" selection-end-column="16" />
+            <state relative-caret-position="126">
+              <caret line="7" column="21" lean-forward="false" selection-start-line="7" selection-start-column="21" selection-end-line="7" selection-end-column="21" />
               <folding />
             </state>
           </provider>
@@ -158,7 +160,6 @@
         <option value="$PROJECT_DIR$/src/UserBundle/Resources/views/Profile/show_content.html.twig" />
         <option value="$PROJECT_DIR$/src/ECommerceBundle/Resources/views/ECommerce/chooseRelay.html.twig" />
         <option value="$PROJECT_DIR$/app/Resources/views/header.html.twig" />
-        <option value="$PROJECT_DIR$/src/ECommerceBundle/Entity/Cart.php" />
         <option value="$PROJECT_DIR$/src/ECommerceBundle/Entity/Order.php" />
         <option value="$PROJECT_DIR$/src/ECommerceBundle/Resources/views/ECommerce/showCart.html.twig" />
         <option value="$PROJECT_DIR$/src/ECommerceBundle/Resources/views/ECommerce/showOrder.html.twig" />
@@ -174,9 +175,10 @@
         <option value="$PROJECT_DIR$/src/ECommerceBundle/Resources/views/ECommerce/showProduct.html.twig" />
         <option value="$PROJECT_DIR$/src/ECommerceBundle/Resources/views/ECommerce/paymentRender.html.twig" />
         <option value="$PROJECT_DIR$/src/ECommerceBundle/Resources/views/ECommerce/paymentReturn.html.twig" />
+        <option value="$PROJECT_DIR$/src/CoreBundle/Admin/UserAdmin.php" />
         <option value="$PROJECT_DIR$/src/ECommerceBundle/Controller/ECommerceController.php" />
         <option value="$PROJECT_DIR$/src/ECommerceBundle/Manager/DeliveryFeeManager.php" />
-        <option value="$PROJECT_DIR$/src/CoreBundle/Admin/UserAdmin.php" />
+        <option value="$PROJECT_DIR$/src/ECommerceBundle/Entity/Cart.php" />
       </list>
     </option>
   </component>
@@ -410,12 +412,12 @@
       <workItem from="1511170735698" duration="173000" />
       <workItem from="1511533873600" duration="959000" />
       <workItem from="1511542677046" duration="11234000" />
-      <workItem from="1512313993643" duration="3190000" />
+      <workItem from="1512313993643" duration="3515000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="37823000" />
+    <option name="totallyTimeSpent" value="38148000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="827" y="107" width="1855" height="1084" extended-state="6" />
@@ -769,32 +771,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ECommerceBundle/Manager/DeliveryFeeManager.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="522">
-          <caret line="29" column="16" lean-forward="false" selection-start-line="29" selection-start-column="16" selection-end-line="29" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ECommerceBundle/Entity/Cart.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="699">
-          <caret line="200" column="20" lean-forward="false" selection-start-line="200" selection-start-column="20" selection-end-line="200" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ECommerceBundle/Controller/ECommerceController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="600">
-          <caret line="94" column="43" lean-forward="true" selection-start-line="94" selection-start-column="43" selection-end-line="94" selection-end-column="43" />
-          <folding>
-            <marker date="1512321128633" expanded="true" signature="14956:15091" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/UserBundle/Entity/User.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="324">
@@ -810,6 +786,32 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="504">
           <caret line="32" column="82" lean-forward="false" selection-start-line="32" selection-start-column="82" selection-end-line="32" selection-end-column="82" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ECommerceBundle/Manager/DeliveryFeeManager.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="7" column="21" lean-forward="false" selection-start-line="7" selection-start-column="21" selection-end-line="7" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ECommerceBundle/Controller/ECommerceController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="600">
+          <caret line="94" column="43" lean-forward="true" selection-start-line="94" selection-start-column="43" selection-end-line="94" selection-end-column="43" />
+          <folding>
+            <marker date="1512322014515" expanded="true" signature="14958:15093" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ECommerceBundle/Entity/Cart.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="699">
+          <caret line="65" column="31" lean-forward="false" selection-start-line="65" selection-start-column="31" selection-end-line="65" selection-end-column="31" />
           <folding />
         </state>
       </provider>
