@@ -310,6 +310,7 @@ class ECommerceController extends Controller
                 'numquestion' => $order->getId(),
                 'amount' => $amount,
                 'order_amount' => $finalPrice,
+                'real_price' => $order->getPrice(),
                 'reference' => "XANTHOS".$order->getId(),
                 'card_number' => $request->get('card_number'),
                 'card_cvv' => $request->get('card_cvv'),
