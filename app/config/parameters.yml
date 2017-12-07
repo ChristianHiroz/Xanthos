@@ -12,5 +12,5 @@ parameters:
     secret: 2e64d2fed7b450b9d73a60359ddc7f7162b81eb7
     site: 1724411
     rank: 01
-    key: 81007dc0c264b2d515e3debc516d929f59f3cdc0c6bdd5541baafc00f23f41e615d3b0b91c6c66ab393e60e6cedc2a65cd775b1bca157a728d9bfd34eb2266b7
+    key: 52f73dfab06e301e4b7db360c3875045b2e18f659d8b5d6c173d1a5ae46d59996c6ae3ab895cbdcefe409cdd168d84fd0cbaf04c2b2ba66d5eea7f208fb43897
     url: xanthos.dev/paymentReturn
