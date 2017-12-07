@@ -338,6 +338,14 @@ class ECommerceController extends Controller
                 if($status === "00000") {
                     $order->setStatus(true);
                     $paymentResult = true;
+                    /** @var Color $color */
+                    foreach($order->getColors() as $color) {
+                        $color->setStock($color->getStock() - 1);
+                        $this->getDoctrine()->getManager()->persist($color);
+                    }
+
+                    $this->getDoctrine()->getManager()->persist($order);
+                    $this->getDoctrine()->getManager()->flush();
                 }else {
                     $paymentResult = false;
                 }

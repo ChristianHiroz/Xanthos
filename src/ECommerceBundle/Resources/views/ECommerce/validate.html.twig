@@ -9,7 +9,7 @@
                 <div class="col-md-12">
                     <h2>Commande #{{ numquestion }}</h2>
                     <p>Montant : {{ real_price }} €</p>
-                    <form method="POST" action="https://preprod-ppps.paybox.com/PPPS.php">
+                    <form method="POST" action="https://ppps.e-transactions.fr/PPPS.php">
                         <input type="hidden" name="VERSION" value="00104">
                         <input type="hidden" name="TYPE" value="00003">
                         <input type="hidden" name="SITE" value="{{ site }}">

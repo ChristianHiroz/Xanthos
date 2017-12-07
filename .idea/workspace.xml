@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="107bef04-7b0d-46c5-b703-bb7e5cf9a072" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/config/parameters.yml" afterPath="$PROJECT_DIR$/app/config/parameters.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ECommerceBundle/Controller/ECommerceController.php" afterPath="$PROJECT_DIR$/src/ECommerceBundle/Controller/ECommerceController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ECommerceBundle/Resources/views/ECommerce/validate.html.twig" afterPath="$PROJECT_DIR$/src/ECommerceBundle/Resources/views/ECommerce/validate.html.twig" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -20,10 +20,10 @@
       <file leaf-file-name="ECommerceController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ECommerceBundle/Controller/ECommerceController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="298">
-              <caret line="327" column="29" lean-forward="false" selection-start-line="327" selection-start-column="16" selection-end-line="327" selection-end-column="29" />
+            <state relative-caret-position="1180">
+              <caret line="346" column="70" lean-forward="false" selection-start-line="346" selection-start-column="70" selection-end-line="346" selection-end-column="70" />
               <folding>
-                <marker date="1512323070401" expanded="true" signature="15214:15349" ph="..." />
+                <marker date="1512669766639" expanded="true" signature="15624:15759" ph="..." />
               </folding>
             </state>
           </provider>
@@ -39,7 +39,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="parameters.yml" pinned="false" current-in-tab="true">
+      <file leaf-file-name="parameters.yml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/config/parameters.yml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="270">
@@ -49,11 +49,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="validate.html.twig" pinned="false" current-in-tab="false">
+      <file leaf-file-name="validate.html.twig" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/ECommerceBundle/Resources/views/ECommerce/validate.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="594">
-              <caret line="33" column="10" lean-forward="false" selection-start-line="33" selection-start-column="10" selection-end-line="33" selection-end-column="10" />
+            <state relative-caret-position="198">
+              <caret line="11" column="87" lean-forward="false" selection-start-line="11" selection-start-column="87" selection-end-line="11" selection-end-column="87" />
               <folding />
             </state>
           </provider>
@@ -194,7 +194,6 @@
         <option value="$PROJECT_DIR$/src/ECommerceBundle/Resources/views/ECommerce/showOrder.html.twig" />
         <option value="$PROJECT_DIR$/src/ECommerceBundle/Resources/views/ECommerce/showOrders.html.twig" />
         <option value="$PROJECT_DIR$/src/ECommerceBundle/Resources/views/ECommerce/payOrder.html.twig" />
-        <option value="$PROJECT_DIR$/src/ECommerceBundle/Resources/views/ECommerce/validate.html.twig" />
         <option value="$PROJECT_DIR$/src/ECommerceBundle/Entity/Product.php" />
         <option value="$PROJECT_DIR$/src/ECommerceBundle/Entity/Color.php" />
         <option value="$PROJECT_DIR$/src/CoreBundle/Admin/ProductAdmin.php" />
@@ -206,8 +205,9 @@
         <option value="$PROJECT_DIR$/src/CoreBundle/Admin/UserAdmin.php" />
         <option value="$PROJECT_DIR$/src/ECommerceBundle/Manager/DeliveryFeeManager.php" />
         <option value="$PROJECT_DIR$/src/ECommerceBundle/Entity/Cart.php" />
-        <option value="$PROJECT_DIR$/src/ECommerceBundle/Controller/ECommerceController.php" />
         <option value="$PROJECT_DIR$/app/config/parameters.yml" />
+        <option value="$PROJECT_DIR$/src/ECommerceBundle/Controller/ECommerceController.php" />
+        <option value="$PROJECT_DIR$/src/ECommerceBundle/Resources/views/ECommerce/validate.html.twig" />
       </list>
     </option>
   </component>
@@ -280,6 +280,54 @@
               <item name="Xanthos" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="config" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="Xanthos" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Xanthos" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="Xanthos" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Xanthos" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="Xanthos" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Xanthos" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="Xanthos" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Xanthos" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="ECommerceBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="Xanthos" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Xanthos" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="ECommerceBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="Xanthos" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Xanthos" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="ECommerceBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="Xanthos" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Xanthos" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="ECommerceBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="ECommerce" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
           </expand>
           <select />
@@ -385,12 +433,12 @@
       <workItem from="1511533873600" duration="959000" />
       <workItem from="1511542677046" duration="11234000" />
       <workItem from="1512313993643" duration="4148000" />
-      <workItem from="1512668683280" duration="455000" />
+      <workItem from="1512668683280" duration="1229000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="40279000" />
+    <option name="totallyTimeSpent" value="41053000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="827" y="107" width="1857" height="1092" extended-state="6" />
@@ -659,14 +707,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ECommerceBundle/Resources/views/ECommerce/validate.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="594">
-          <caret line="33" column="10" lean-forward="false" selection-start-line="33" selection-start-column="10" selection-end-line="33" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/ECommerceBundle/Entity/Product.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3276">
@@ -769,20 +809,28 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ECommerceBundle/Controller/ECommerceController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="298">
-          <caret line="327" column="29" lean-forward="false" selection-start-line="327" selection-start-column="16" selection-end-line="327" selection-end-column="29" />
-          <folding>
-            <marker date="1512323070401" expanded="true" signature="15214:15349" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/config/parameters.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
           <caret line="15" column="26" lean-forward="false" selection-start-line="15" selection-start-column="26" selection-end-line="15" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ECommerceBundle/Controller/ECommerceController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1180">
+          <caret line="346" column="70" lean-forward="false" selection-start-line="346" selection-start-column="70" selection-end-line="346" selection-end-column="70" />
+          <folding>
+            <marker date="1512669766639" expanded="true" signature="15624:15759" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ECommerceBundle/Resources/views/ECommerce/validate.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="11" column="87" lean-forward="false" selection-start-line="11" selection-start-column="87" selection-end-line="11" selection-end-column="87" />
           <folding />
         </state>
       </provider>
